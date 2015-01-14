@@ -1,0 +1,21 @@
+.social {
+  padding: 1rem 0 0;
+}
+
+.social-link,
+.social-link:visited {
+  @extend .h3;
+  @extend .gray;
+
+  margin: 0 .2rem;
+}
+
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
+  @extend .blue;
+}
+
+.social-link-icon {
+  margin: 0 .3rem;
+}

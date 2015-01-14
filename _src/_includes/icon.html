@@ -1,0 +1,25 @@
+{% assign icon_type = include.post_or_event.type %}
+
+{% case icon_type %}
+  {% when 'event' %}
+    {% assign icon_class = 'flag' %}
+  {% when 'link' %}
+    {% assign icon_class = 'link' %}
+  {% when 'post', 'essay' %}
+    {% assign icon_class = 'file' %}
+  {% when 'trip' %}
+    {% assign icon_class = 'plane' %}
+  {% when 'talk', 'lecture' %}
+    {% assign icon_class = 'comment' %}
+  {% when 'appearance' %}
+    {% assign icon_class = 'professor' %}
+  {% when 'video' %}
+    {% assign icon_class = 'video' %}
+  {% when 'snippet', 'hackathon', 'experiment' %}
+    {% assign icon_class = 'code' %}
+  {% else %}
+    {% assign icon_class = 'unknown' %}
+    !!! {{icon_type}} doesn't have a mapping. !!!
+{% endcase %}
+
+<i class="fa fa-{{icon_class}}"></i>

@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+<ul class="list">
+  {% assign sorted_entries = site.entries | sort: 'date' %}
+  {% for post in sorted_entries %}
+    {% for category in post.categories %}
+      {% if category == page.category %}
+        {% include post-list-item.html post=post %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>

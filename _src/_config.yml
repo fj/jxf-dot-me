@@ -1,0 +1,59 @@
+# Site settings
+title: John Feminella
+email: jxf@jxf.me
+
+mappings:
+  scss:
+    source: _src/_scss
+    output: _src/assets/css
+
+# Url settings
+baseurl: ""
+url:     "http://jxf.me"
+
+# Social handles
+twitter_username:    jxxf
+twitter_url:         https://twitter.com/jxxf
+github_username:     fj
+github_url:          https://github.com/fj
+linkedin_username:   johnxf
+linkedin_url:        https://linkedin.com/in/johnxf
+stackoverflow_url:   https://stackoverflow.com/users/75170/john-feminella
+
+permalink: /blog/:title
+
+# Build settings
+source:      _src
+destination: _out
+
+markdown:     kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+exclude:     ['node_modules', 'gulpfile.js', 'package.json', 'Gemfile', 'Gemfile.lock', 'divshot.json', '.divshot-cache']
+
+# Custom collections
+collections:
+  entries:
+    refname: entry
+    output: true
+  events:
+    refname: event
+    output: true
+
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      type: entries
+    values:
+      layout: post
+  -
+    scope:
+      type: events
+    values:
+      layout: event

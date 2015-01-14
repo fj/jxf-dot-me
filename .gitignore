@@ -1,0 +1,9 @@
+# dependencies
+.gem
+.sass-cache
+node_modules
+
+# build
+_out
+_src/assets
+.jekyll-metadata

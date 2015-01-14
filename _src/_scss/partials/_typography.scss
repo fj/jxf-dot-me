@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px|PT+Sans:400,700,400italic|Inconsolata);
+
+$sans-font-family: 'PT Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$serif-font-family: 'Slabo 27px', 'Georgia', serif;
+$monospace-font-family: 'Inconsolata', 'Monaco', 'Courier New', monospace;
+
+html {
+  color: $text-color;
+  font-family: $sans-font-family;
+}
+
+.sans {
+  font-family: $sans-font-family;
+}
+
+pre,
+code,
+.monospace {
+  font-family: $monospace-font-family;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.serif {
+  font-family: $serif-font-family;
+}

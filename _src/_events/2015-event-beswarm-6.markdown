@@ -1,0 +1,22 @@
+---
+type:        event
+title:       "beSwarm 6"
+date:        2015-02-06
+description: >
+  Charlottesville's 6th annual technology unconference.
+---
+
+**beSwarm** is an annual event for the central Virginia technology community. It's run in the ["unconference"](http://en.wikipedia.org/wiki/Unconference) format -- meaning that there are no speakers decided in advance, no prepared slide decks, and especially no vendors making obnoxious pitches.
+
+Instead, the event coalesces around the interesting people that show up (like you!). The topics are whatever the attendees would like to talk about, show off, or demonstrate. For example:
+
+* something interesting you're working on
+* something neat you recently learned
+* something cool you built
+* something complicated you wrote
+
+and so on.
+
+As an attendee, your goal should be to try to learn at least one thing you didn't know before, and to talk about one thing you want to share (even if it's just to one other person). You should always feel free to "vote with your feet": walk over and explore whatever seems interesting to you.
+
+beSwarm can't succeed without your help! Tell everyone you know!

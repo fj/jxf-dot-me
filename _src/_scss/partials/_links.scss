@@ -1,0 +1,41 @@
+a,
+a:visited,
+.link,
+.link:visited {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active,
+.link:focus,
+.link:hover,
+.link:active {
+  color: $link-color--hover;
+  text-decoration: none;
+}
+
+a {
+  transition: color .2s ease-out;
+}
+
+.markdown-content a {
+  border-bottom: thin $text-color dotted;
+}
+
+.dotted-link,
+.dotted-links a {
+  color: $text-color;
+  border-bottom: thin $text-color dotted;
+}
+
+.dotted-link:focus,
+.dotted-links a:focus,
+.dotted-link:hover,
+.dotted-links a:hover,
+.dotted-link:active
+.dotted-links a:active {
+  color: $link-color;
+  border-bottom: thin $link-color dotted;
+}

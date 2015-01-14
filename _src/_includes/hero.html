@@ -1,0 +1,28 @@
+<section class="hero">
+  <div class="measure--lg">
+    <img src="{{'/images/jf.jpeg' | prepend: site.baseurl}}" alt="picture of John Feminella" class="hero-image">
+    <h1 class="hero-title">
+      {{site.title}}
+    </h1>
+    <p class="hero-description caps">
+      {% include description.content %}
+    </p>
+    <nav class="social">
+      <a class="social-link" href="{{site.github_url}}" title="me on Github">
+        <i class="jf-i jf-i-github social-link-icon"></i>
+      </a>
+      <a class="social-link" href="{{site.twitter_url}}" title="me on Twitter">
+        <i class="jf-i jf-i-twitter social-link-icon"></i>
+      </a>
+      <a class="social-link" href="{{site.linkedin_url}}" title="me on LinkedIn">
+        <i class="jf-i jf-i-linkedin social-link-icon"></i>
+      </a>
+      <a class="social-link" href="{{site.stackoverflow_url}}" title="me on StackOverflow">
+        <i class="jf-i jf-i-stack-overflow social-link-icon"></i>
+      </a>
+      <a class="social-link" href="/meta.html#contact" title="Get in touch with me">
+        <i class="jf-i jf-i-envelope-o social-link-icon"></i>
+      </a>
+    </nav>
+  </div>
+</section>

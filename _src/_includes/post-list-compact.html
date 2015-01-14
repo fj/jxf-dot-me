@@ -1,0 +1,13 @@
+<div class="block">
+  <div class="list-meta-title">
+    recent posts
+    <a href="{{ "/blog.html" | prepend: site.baseurl }}" class="list-meta-all" title="See all posts">see all</a>
+  </div>
+
+  <ul class="list">
+    {% assign sorted_entries = site.entries | sort: 'date' | reverse %}
+    {% for post in sorted_entries limit:3 %}
+      {% include list-item-compact.html list_item=post %}
+    {% endfor %}
+  </ul>
+</div>

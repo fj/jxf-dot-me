@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+<div class="measure--lg">
+  <h1 class="h2 txt--center">Archives</h1>
+  <ul class="list">
+    {% assign sorted_entries = site.entries | sort: 'date' %}
+    {% for post in sorted_entries %}
+      {% include post-list-item.html post=post %}
+    {% endfor %}
+  </ul>
+</div>

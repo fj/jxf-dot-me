@@ -1,0 +1,32 @@
+---
+layout: measure-lg
+---
+
+<div class="measure--lg">
+  <div class="media-object">
+    <div class="media-object-figure mr1 txt--right">
+      <h3 class="list-item-title">
+        {% include icon.html post_or_event=page %}
+      </h3>
+      <div class="muted--2x">
+        {% include long-date.html date=page.date %}<br>
+        {{ content | number_of_words }} words
+        <div class="post-categories">
+          {% for tag in page.tags %}
+            <span class="post-category">
+              <a href="/tag/{{tag}}" title="{{tag}}" class="dotted-link caps">{{tag}}</a>
+            </span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="media-object-body">
+      <h3 class="list-item-title">
+        {{page.title}}
+      </h3>
+      <article class="py2 markdown-content">
+        {{ content }}
+      </article>
+    </div>
+  </div>
+</div>

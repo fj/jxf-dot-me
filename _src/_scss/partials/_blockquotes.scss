@@ -1,0 +1,20 @@
+blockquote {
+  @extend .bg--off-white-light;
+  color: $text-color--light;
+  margin: 1rem auto 1rem;
+  padding: 1rem 1.5rem;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote footer cite {
+  @extend .small;
+  font-style: normal;
+}
+
+blockquote footer cite:before {
+  content: '- ';
+}

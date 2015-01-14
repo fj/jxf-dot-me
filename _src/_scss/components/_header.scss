@@ -1,0 +1,52 @@
+.header {
+  padding: 1rem 0;
+}
+
+.header-brand,
+.header-nav-item {
+  line-height: 2;
+  vertical-align: middle;
+}
+
+.header-brand {
+  float: left;
+}
+
+.header-nav {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+}
+
+.header-nav-item {
+  display: inline;
+  padding: 0 .5rem;
+}
+
+.header-nav-item {
+  padding-right: 0;
+}
+
+.header-nav-item .active {
+  font-weight: bold;
+}
+
+.header a,
+.header a:visited, {
+  color: $text-color;
+}
+
+.header a:focus,
+.header a:hover,
+.header a:active, {
+  color: $link-color;
+}
+
+.header-nav-item:after {
+  content: ' \0000b7';
+  margin-left: .5rem;
+}
+
+.header-nav-item:last-child:after {
+  content: '';
+}
