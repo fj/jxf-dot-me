@@ -1,0 +1,24 @@
+{% assign current = page.url | downcase | split: '/' %}
+
+<header class="header">
+  <div class="{% if include.width_class %}{{include.width_class}}{% else %}measure{% endif %}">
+    <div class="header-brand">
+      <a href="{{'/' | prepend: site.baseurl}}" title="{{site.title}}">jxf</a>
+    </div>
+    <nav class="header-nav">
+      <div class="header-nav-item">
+        <a href="{{'/blog.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'blog' || current[1] == 'blog.html' %}class="active"{% endif %} title="Blog">Blog</a>
+      </div>
+      <div class="header-nav-item">
+        <a href="{{'/portfolio.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'portfolio' || current[1] == 'portfolio.html' %}class="active"{% endif %} title="Portfolio">Portfolio</a>
+      </div>
+      <div class="header-nav-item">
+        <a href="{{'/services.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'services' || current[1] == 'services.html' %}class="active"{% endif %} title="Services">Services</a>
+      </div>
+      <div class="header-nav-item">
+        <a href="{{'/meta.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'meta' || current[1] == 'meta.html' %}class="active"{% endif %} title="Meta">Meta</a>
+      </div>
+    </nav>
+    <div class="clearfix"></div>
+  </div>
+</header>

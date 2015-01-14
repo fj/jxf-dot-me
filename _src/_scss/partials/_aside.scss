@@ -1,0 +1,28 @@
+// This is a bit of a hack. However it allows the aside the fill the right 30% of the
+// markdown-content div, and other elements to fill the left 65%. It is quite likely
+// That I missed an element here, the will need to be added to the second selector
+// collection below.
+
+@media screen and (min-width: $screen-m) {
+  .markdown-content aside {
+    @extend .h6;
+    @extend .muted--2x;
+
+    border-left: 2px solid #fafafa;
+    float: right;
+    margin-left: .5rem;
+    max-width: 30%;
+    padding: .5rem;
+  }
+
+  .markdown-content p,
+  .markdown-content pre,
+  .markdown-content blockquote {
+    margin-left: 0;
+    width: 65%;
+  }
+
+  .markdown-content p img {
+    max-width: 100%;
+  }
+}

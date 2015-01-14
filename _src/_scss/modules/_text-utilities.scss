@@ -1,0 +1,49 @@
+.italic {
+  font-style: italic;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.caps {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.light {
+  color: $text-color--light;
+}
+
+.caption {
+  @extend .small;
+  border-bottom: thin solid $off-white;
+  line-height: 1;
+  padding: 0 0 .3rem;
+}
+
+.txt--right {
+  text-align: right;
+}
+
+.txt--left {
+  text-align: left;
+}
+
+.txt--center {
+  text-align: center;
+}

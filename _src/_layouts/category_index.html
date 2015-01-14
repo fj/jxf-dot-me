@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+<ul class="list">
+  {% for post in site.posts %}
+    {% for category in post.categories %}
+      {% if category == page.category %}
+        {% include post-list-item.html post=post %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>

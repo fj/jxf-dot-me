@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<div class="measure--lg">
+  <h1 class="h2 txt--center">Blog</h1>
+  <ul class="list">
+    {% for post in site.posts limit:20 %}
+      {% include post-list-item.html post=post %}
+    {% endfor %}
+  </ul>
+
+  <div class="py1 txt--center">
+    <a href="{{'/archive.html' | prepend: site.baseurl}}">See More</a>
+  </div>
+</div>

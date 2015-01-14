@@ -1,0 +1,12 @@
+<div class="block">
+  <div class="list-meta-title">
+    recent posts
+    <a href="{{ "/blog.html" | prepend: site.baseurl }}" class="list-meta-all" title="See all posts">see all</a>
+  </div>
+
+  <ul class="list">
+    {% for post in site.posts limit:3 %}
+      {% include list-item-compact.html title=post.title url=post.url date=post.date icon_type=post.icon_type %}
+    {% endfor %}
+  </ul>
+</div>

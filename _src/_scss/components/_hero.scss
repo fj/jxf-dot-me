@@ -1,0 +1,23 @@
+.hero {
+  @extend .p2;
+
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.hero-image {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.hero-description {
+  font-size: 1.121rem;
+  width: auto;
+}
+
+@media screen and (min-width: $screen-l) {
+  .hero-description {
+    margin: 0 auto;
+    width: 75%;
+  }
+}

@@ -1,0 +1,12 @@
+---
+layout: page
+---
+
+<div class="measure--lg">
+  <h1 class="h2 txt--center">Archives</h1>
+  <ul class="list">
+    {% for post in site.posts %}
+      {% include post-list-item.html post=post %}
+    {% endfor %}
+  </ul>
+</div>

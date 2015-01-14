@@ -1,0 +1,12 @@
+<div class="block">
+  <div class="list-meta-title">
+    events
+    <a href="{{ '/events.html' | prepend: site.baseurl }}" class="list-meta-all">see all</a>
+  </div>
+
+  <ul class="list">
+    {% for event in site.events reversed limit:3 %}
+      {% include list-item-compact.html title=event.title url=event.url date=event.date icon_type=event.icon_type %}
+    {% endfor %}
+  </ul>
+</div>

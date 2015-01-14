@@ -1,0 +1,12 @@
+pre {
+  line-height: 1.25;
+  overflow-x: auto;
+  padding: .5rem;
+}
+
+pre,
+code {
+  background-color: #fafafa;
+  color: lighten($text-color, 10%);
+  padding: .1rem .3rem;
+}

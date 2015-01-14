@@ -1,0 +1,35 @@
+<li class="list-item">
+  <div class="media-object">
+    <div class="media-object-figure mr1 txt--right">
+      <h3 class="list-item-title">
+        <a href="{{include.post.url | prepend: site.baseurl}}" title="{{include.post.title}}">
+          <i class="jf-i-{% if include.post.icon_type %}{{include.post.icon_type}}{% else %}file{% endif %}"></i>
+        </a>
+      </h3>
+      <div class="muted--2x">
+        {% include long-date.html date=include.post.date %}<br>
+        {{ include.post.content | number_of_words }} words
+      </div>
+    </div>
+    <div class="media-object-body">
+      <h3 class="list-item-title">
+        <a href="{{include.post.url | prepend: site.baseurl}}" title="{{include.post.title}}">
+          {{include.post.title}}
+        </a>
+      </h3>
+      <div class="list-item-description">
+        <div class="post-categories">
+          {% for tag in include.post.tags %}
+            <span class="post-category">
+              <a href="/tag/{{tag}}" title="{{tag}}" class="dotted-link caps">{{tag}}</a>
+            </span>
+          {% endfor %}
+        </div>
+        {{include.post.description}} <br>
+        <a href="{{include.post.url | prepend: site.baseurl}}" title="Read {{include.post.title}}">
+          Read more
+        </a>
+      </div>
+    </div>
+  </div>
+</li>

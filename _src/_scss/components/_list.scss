@@ -1,0 +1,72 @@
+.list-meta-title {
+  margin-top: 2.414rem;
+}
+
+.list-meta-title {
+  @extend .caps;
+  @extend .muted;
+  @extend .sans;
+  @extend .bold;
+
+  border-bottom: thin solid #fafafa;
+}
+
+.list-meta-all {
+  @extend .right;
+  @extend .thin;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 2.827rem;
+}
+
+.list-item {
+  margin: 0;
+  padding: 0 0 1rem;
+}
+
+.list-item--compact {
+  margin: 0;
+  padding: 0;
+}
+
+.list-item-title--compact {
+  margin: 0;
+  padding: .5rem 0;
+}
+
+.list-item-title {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.list-item-description {
+  @extend .muted;
+}
+
+.list-item-description-content {
+  margin-top: 1.5rem;
+}
+
+.list-item a:not(.link),
+.list-item a:not(.link):visited {
+  color: $text-color;
+}
+
+.list-item a:not(.link):focus,
+.list-item a:not(.link):hover,
+.list-item a:not(.link):active, {
+  color: $link-color;
+}
