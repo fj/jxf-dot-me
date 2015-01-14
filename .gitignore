@@ -1,0 +1,6 @@
+# dependencies
+.gem
+node_modules
+
+# build
+_out
