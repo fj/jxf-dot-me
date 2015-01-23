@@ -6,7 +6,7 @@
 
   <ul class="list">
     {% for post in site.posts limit:3 %}
-      {% include list-item-compact.html title=post.title url=post.url date=post.date icon_type=post.icon_type %}
+      {% include list-item-compact.html list_item=post %}
     {% endfor %}
   </ul>
 </div>
