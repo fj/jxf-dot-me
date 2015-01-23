@@ -4,13 +4,13 @@
       <div class="media-object-figure">
         <h4 class="m0">
           <small>
-            {% include list-item-meta.html icon_type=include.icon_type date=include.date %}
+            {% include list-item-meta.html list_item=include.list_item %}
           </small>
         </h4>
       </div>
       <div class="media-object-body">
         <h4 class="m0">
-          {{include.title}}
+          {{include.list_item.title}}
         </h4>
       </div>
     </div>

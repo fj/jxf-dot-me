@@ -1,15 +1,18 @@
-{% if 'link' contains include.icon_type %}
+{% assign icon_type = include.post_or_event.categories[0] %}
+
+{% if 'link' contains icon_type %}
   <i class="jf-i-link"></i>
-{% elsif 'file blog post writing essay' contains include.icon_type %}
+{% elsif 'file blog post writing essay' contains icon_type %}
   <i class="jf-i-file"></i>
-{% elsif 'plane travel trip' contains include.icon_type %}
+{% elsif 'plane travel trip' contains icon_type %}
   <i class="jf-i-plane"></i>
-{% elsif 'comment' contains include.icon_type %}
+{% elsif 'comment comments' contains icon_type %}
   <i class="jf-i-comment"></i>
-{% elsif 'professor talk speaking' contains include.icon_type %}
+{% elsif 'professor talk speaking class' contains icon_type %}
   <i class="jf-i-professor"></i>
-{% elsif 'videocamera video film' contains include.icon_type %}
+{% elsif 'videocamera video film' contains icon_type %}
   <i class="jf-i-videocamera"></i>
 {% else %}
+  {{icon_type}} doesn't have a mapping. <br>
   Please see _src/_includes/icon.html to see the correct icon types.
 {% endif %}
