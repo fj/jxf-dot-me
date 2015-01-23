@@ -3,7 +3,7 @@
     <div class="media-object-figure mr1 txt--right">
       <h3 class="list-item-title">
         <a href="{{include.post.url | prepend: site.baseurl}}" title="{{include.post.title}}">
-          <i class="jf-i-{% if include.post.icon_type %}{{include.post.icon_type}}{% else %}file{% endif %}"></i>
+          {% include icon.html icon_type=include.post.icon_type %}
         </a>
       </h3>
       <div class="muted--2x">

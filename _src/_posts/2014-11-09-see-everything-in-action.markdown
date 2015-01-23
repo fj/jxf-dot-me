@@ -3,6 +3,7 @@ layout:        post
 title:         See Everything in Action with a Really Long Post Title
 date:          2014-11-09 12:36:06
 nav_highlight: blog
+icon_type:     post
 description:   See what the different elements looks like. Your markdown has never looked better. I promise.
 tags:          jekyll pixyll
 ---
