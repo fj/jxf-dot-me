@@ -3,7 +3,7 @@
     <div class="media-object-figure mr1 txt--right">
       <h3 class="list-item-title">
         <a href="{{include.post.url | prepend: site.baseurl}}" title="{{include.post.title}}">
-          {% include icon.html icon_type=include.post.icon_type %}
+          {% include icon.html post_or_event=post %}
         </a>
       </h3>
       <div class="muted--2x">

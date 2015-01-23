@@ -3,8 +3,8 @@ layout:        post
 title:         "Welcome to Jekyll!"
 date:          2014-11-08 12:36:06
 tags:          jekyll update
-icon_type:     link
 nav_highlight: blog
+categories:    link description
 description:   A short introduction and primer for Jekyll, a static site generator.
 ---
 

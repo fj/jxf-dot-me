@@ -2,8 +2,8 @@
 layout:      event
 title:       "A Video Post"
 date:        2014-11-12 10:36:06
-categories:  talk video
-icon_type:   videocamera
+categories:
+  - video
 description: A recording of a talk.
 ---
 
