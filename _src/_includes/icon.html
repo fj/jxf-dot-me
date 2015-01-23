@@ -1,0 +1,15 @@
+{% if 'link' contains include.icon_type %}
+  <i class="jf-i-link"></i>
+{% elsif 'file blog post writing essay' contains include.icon_type %}
+  <i class="jf-i-file"></i>
+{% elsif 'plane travel trip' contains include.icon_type %}
+  <i class="jf-i-plane"></i>
+{% elsif 'comment' contains include.icon_type %}
+  <i class="jf-i-comment"></i>
+{% elsif 'professor talk speaking' contains include.icon_type %}
+  <i class="jf-i-professor"></i>
+{% elsif 'videocamera video film' contains include.icon_type %}
+  <i class="jf-i-videocamera"></i>
+{% else %}
+  Please see _src/_includes/icon.html to see the correct icon types.
+{% endif %}
