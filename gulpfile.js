@@ -85,4 +85,25 @@ gulp.task('bootstrap', function() {
   });
 });
 
+gulp.task('deploy', ['build'], function() {
+  gutil.log(gutil.colors.yellow('[deploy] entering output directory'));
+  process.chdir('_out');
+  gutil.log(gutil.colors.yellow('[deploy] deleting old git directory'));
+  run('rm -rf .git').exec();
+  gutil.log(gutil.colors.yellow('[deploy] initializing new git directory'));
+  run('git init').exec();
+  run('git add .').exec();
+  var now = new Date();
+  var now_utc = new Date(
+    now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),
+    now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds()
+  );
+  gutil.log(gutil.colors.yellow('[deploy] making first commit'));
+  run('git commit -m "`date -u`"').exec();
+  gutil.log(gutil.colors.yellow('[deploy] making git remote'));
+  run('git remote add origin-github-pages git@github.com:fj/fj.github.io.git').exec();
+  gutil.log(gutil.colors.yellow('[deploy] pushing'));
+  run('git push -f origin-github-pages master').exec();
+});
+
 gulp.task('default', ['scss', 'csslint', 'js', 'jshint', 'watch']);
