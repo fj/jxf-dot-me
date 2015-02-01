@@ -5,9 +5,6 @@
 
 @media screen and (min-width: $screen-m) {
   .markdown-content aside {
-    @extend .h6;
-    @extend .muted--2x;
-
     border-left: 2px solid #fafafa;
     float: right;
     margin-left: .5rem;
@@ -25,4 +22,9 @@
   .markdown-content p img {
     max-width: 100%;
   }
+}
+
+.markdown-content aside {
+  @extend .h6;
+  @extend .muted--2x;
 }
