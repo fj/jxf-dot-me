@@ -3,35 +3,11 @@ layout: page
 ---
 
 <div class="measure">
-  <h1>Events</h1>
+  <h1 class="h2 txt--center">Events</h1>
   <ul class="list">
     {% assign events = site.events | sort: 'date' %}
     {% for event in events reversed %}
-      <li class="list-item">
-        <a href="{{event.url | prepend: site.baseurl}}" title="{{event.title}}">
-          <h3 class="list-item-title">
-            <i class="jxf-i-{% if event.icon_type %}{{event.icon_type}}{% else %}file{% endif %}"></i>
-            {{event.title}}
-          </h3>
-          <p class="list-item-description">
-            <time class="italic" title="{{event.date | date: '%F %r'}}">
-              {{event.date | date: '%F'}}
-            </time> &nbsp;
-            {% for category in event.categories %}
-              <span class="event-category">
-                <a href="#" title="{{category}}" class="link caps">{{category}}</a>
-              </span>
-            {% endfor %} <br>
-            {{event.description}} <br>
-            <a href="{{event.url | prepend: site.baseurl}}" title="Read {{event.title}}">
-              Read more...
-              <span class="small">
-                {{event.content | number_of_words}} words
-              </span>
-            </a>
-          </p>
-        </a>
-      </li>
+      {% include event-list-item.html event = event %}
     {% endfor %}
   </ul>
 </div>

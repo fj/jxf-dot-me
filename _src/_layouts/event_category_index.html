@@ -1,0 +1,10 @@
+---
+layout: page
+---
+
+<ul class="list">
+  {% assign events = page.events | sort: 'date' %}
+  {% for event in page.events reversed %}
+    {% include event-list-item.html event=event %}
+  {% endfor %}
+</ul>

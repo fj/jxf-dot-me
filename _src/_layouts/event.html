@@ -1,7 +1,34 @@
 ---
-layout: measure
+layout: measure-lg
 ---
 
-<div class="measure">
-  {{content}}
+<div class="measure--lg">
+  <div class="media-object">
+    <div class="media-object-figure mr1 txt--right">
+      <h3 class="list-item-title">
+        <i class="jf-i-{% if icon_type %}{{icon_type}}{% else %}file{% endif %}"></i>
+      </h3>
+      <div class="muted--2x">
+        {% include long-date.html date=page.date %}<br>
+        {{ content | number_of_words }} words
+      </div>
+    </div>
+    <div class="media-object-body">
+      <h3 class="list-item-title">
+        {{page.title}}
+      </h3>
+      <div class="list-item-description">
+        <div class="post-categories">
+          {% for category in page.categories %}
+            <span class="post-category">
+              <a href="#" title="{{category}}" class="dotted-link caps">{{category}}</a>
+            </span>
+          {% endfor %}
+        </div>
+      </div>
+      <article class="py2 dotted-links markdown-content">
+        {{ content }}
+      </article>
+    </div>
+  </div>
 </div>
