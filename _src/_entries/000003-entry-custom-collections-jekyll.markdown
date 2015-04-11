@@ -1,7 +1,7 @@
 ---
 type:         snippet
 title:        "Fully-Featured Custom Collections in Jekyll"
-date:         2015-03-19T07:00:00Z
+date:         2015-04-10T07:00:00Z
 tags:
   - jekyll
 description: >
@@ -14,7 +14,7 @@ description: >
 
 Because it's so easy to get started with Jekyll, it feels frustrating when you're eventually hamstrung by framework limitations. Unfortunately, while knee-deep in writing this site, I found myself in exactly that situation.
 
-## Jekyll's default collections
+# Jekyll's default collections
 
 Jekyll ships with two types of collections by default:
 
@@ -28,17 +28,17 @@ You make a custom collection with two steps:
 
 * First, you put a folder at your project's `source` root named after the collection. For example,  If the files in the collection should generate corresponding output files, then 
 
-## Limitations of default collections
+# Limitations of default collections
 
 Pages and posts suffice for most use cases, but they have some big limitations that may not readily be apparent.
 
-### Inflexible post filename formats
+## Inflexible post filename formats
 
 First, every post file must be named according to the format string `<YYYY>-<MM>-<DD>-<title>.<extension>`. Any post which doesn't have this form is invalid and throws an error.
 
 I found this to be an obnoxious limitation because I don't usually finish a post on the same day I start it. That means that the filename I make the post with reflects the day I started the post, not the day I finished the post. You can override the date that Jekyll actually outputs by using `date` in your [YAML front matter](jekyllrb.com/docs/frontmatter/), but then there's no point in also having a date in the filename, since it's redundant and never used.
 
-### Inconsistent domain model of posts and pages
+## Inconsistent domain model of posts and pages
 
 Pages don't have access to most of the Liquid attributes that posts do. This means that your templates must special-case pages and posts to a degree that requires a lot of repetition. In my layouts, a post is merely a page that has some extra metadata shown, so I wanted to avoid special-casing things if I could.
 
@@ -72,7 +72,7 @@ ATTRIBUTES_FOR_LIQUID = %w[
 
 There is an open issue for [Jekyll 3](https://github.com/jekyll/jekyll/issues/3169) discussing the 
 
-### Bad sorting defaults
+## Bad sorting defaults
 
 While most of Jekyll's defaults are sensible, the sorting defaults are undesirable. The sort key on a given post is the date of the post, which is either generated from the filename or from the `date` attribute. Jekyll sorts posts in ascending date order, so in a list of posts, a post dated January 15 comes after, e.g., one dated January 2, even though January 2 is lexicographically later.
 
@@ -88,6 +88,6 @@ That seems like a reasonable tradeoff. But then Jekyll recommends using the [`so
 
 But this requires you to make sure you have a `foo` property in your YAML front matter for each page, which can be obnoxious. If you forget, there won't be any hints or warnings, so your site will just silently break.
 
-### No relative navigation available on custom collections
+## No relative navigation available on custom collections
 
-Anything that's not in the `_posts` collection doesn't get `next` or `previous` attributes to it, as we saw before. That in turn means
+Anything that's not in the `_posts` collection doesn't get `next` or `previous` attributes to it, as we saw before. That means there's no way to get an ordering over the items in your collection, which is obnoxious if your collection has a natural ordering over some field. For example, you almost always want blog posts to be ordered by their `date` field, but you won't get this ability on a custom collection.
