@@ -1,6 +1,8 @@
 {% assign icon_type = include.post_or_event.type %}
 
 {% case icon_type %}
+  {% when 'conference' %}
+    {% assign icon_class = 'users' %}
   {% when 'event' %}
     {% assign icon_class = 'flag' %}
   {% when 'link' %}
@@ -22,4 +24,4 @@
     !!! {{icon_type}} doesn't have a mapping. !!!
 {% endcase %}
 
-<i class="fa fa-{{icon_class}}"></i>
+<i class="jf-i jf-i-{{icon_class}}"></i>

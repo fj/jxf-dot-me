@@ -6,7 +6,7 @@
 
   <ul class="list">
     {% assign sorted_entries = site.entries | sort: 'date' | reverse %}
-    {% for post in sorted_entries limit:3 %}
+    {% for post in sorted_entries limit:5 %}
       {% include list-item-compact.html list_item=post %}
     {% endfor %}
   </ul>
