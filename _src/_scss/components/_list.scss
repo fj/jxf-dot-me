@@ -52,6 +52,10 @@
   padding: 1rem 0;
 }
 
+.list-item-solo-title {
+  border-bottom: 1px solid $off-white-dark;
+}
+
 .list-item-description {
   @extend .muted;
 }
