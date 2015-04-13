@@ -1,25 +1,24 @@
 {% assign current = page.url | downcase | split: '/' %}
+{% assign section = current[1] %}
 {% assign page.nav_highlight = 'blog' %}
 
 <header class="header">
   <div class="{% if include.width_class %}{{include.width_class}}{% else %}measure{% endif %}">
     <div class="header-brand">
-      <a href="{{'/' | prepend: site.baseurl}}" title="{{site.title}}">jxf</a>
+      <a href="{{'/' | prepend: site.baseurl}}" title="{{site.title}}">{ jxf }</a>
     </div>
     <nav class="header-nav">
       <div class="header-nav-item">
-        <a href="{{'/blog.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'blog' or current[1] == 'blog.html' %} class="active" {% endif %} title="Blog">Blog</a>
-      </div>
-      {% if false %}
-      <div class="header-nav-item">
-        <a href="{{'/portfolio.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'portfolio' or current[1] == 'portfolio.html' %}class="active"{% endif %} title="Portfolio">Portfolio</a>
+        <a href="{{'/blog.html' | prepend: site.baseurl}}" {% if section == 'blog' or section == 'entries' %} class="active"{% endif %} title="Blog">Blog</a>
       </div>
       <div class="header-nav-item">
-        <a href="{{'/services.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'services' or current[1] == 'services.html' %}class="active"{% endif %} title="Services">Services</a>
+        <a href="{{'/portfolio.html' | prepend: site.baseurl}}" {% if section == 'portfolio' %} class="active"{% endif %} title="Work">Work</a>
       </div>
-      {% endif %}
       <div class="header-nav-item">
-        <a href="{{'/meta.html' | prepend: site.baseurl}}" {% if page.nav_highlight == 'meta' or current[1] == 'meta.html' %}class="active"{% endif %} title="Meta">Meta</a>
+        <a href="{{'/meta.html' | prepend: site.baseurl}}" {% if section == 'meta' %} class="active"{% endif %} title="Meta">Meta</a>
+      </div>
+      <div class="header-nav-item">
+        <a href="{{'/self.html' | prepend: site.baseurl}}" {% if section == 'self' %} class="active"{% endif %} title="Self">Self</a>
       </div>
     </nav>
     <div class="clearfix"></div>
