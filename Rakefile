@@ -96,7 +96,7 @@ task :deploy => [:build] do
     execute_command 'rm -rf .git'
     execute_command 'git init'
     execute_command 'git add .'
-    execute_command 'git commit -m "`date -u`"'
+    execute_command 'git commit -m "deployed on: `date -u`"'
     execute_command 'git remote add origin-github-pages git@github.com:fj/fj.github.io.git'
     execute_command 'git push -f origin-github-pages master'
   }
