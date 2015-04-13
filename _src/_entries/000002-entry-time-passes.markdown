@@ -55,7 +55,7 @@ But it would be difficult to remember what was happening one hundred days ago. A
 
 To put that in better perspective, citizens in the top one-third of countries by life expectancy can expect a mean lifespan of about <a href="http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy">eighty years</a>. That's about 30,000 days. By the time you hit your 27th birthday, you're down about 10,000 of those days -- and we can barely remember the overwhelming majority of them.
 
-In that milieu, what does a span of 10,000 days actually mean against your total lifespan? It's hard to get the same perspective there that we have for a single day or a week. What if we ask a more direct question: how much time do we have left, and how can we visualize that?
+In that milieu, what does 10,000 days mean against your total lifespan? It's hard to get the same perspective there that we have for a single day or a week. What if we ask a more direct question: how much time do we have left, and how can we visualize that?
 
 ## Visualizing your lifespan
 
