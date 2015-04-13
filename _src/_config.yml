@@ -28,6 +28,7 @@ destination: _out
 
 markdown:     kramdown
 kramdown:
+  input: GFM
   syntax_highlighter: rouge
 
 exclude:     ['node_modules', 'gulpfile.js', 'package.json', 'Gemfile', 'Gemfile.lock', 'divshot.json', '.divshot-cache']
@@ -40,6 +41,9 @@ collections:
   events:
     refname: event
     output: true
+  projects:
+    refname: project
+    sort_by: date_range
 
 defaults:
   -
