@@ -4,155 +4,35 @@ layout: measure-lg
 
 <div class="measure--lg">
   <h1 class="h2 txt--center">Portfolio</h1>
+  <h2 class="h4 txt--center py1">collected summary of my consulting work</h2>
+  {% assign project_groups = site.projects | sort: 'date_range' | by_group: 2 %}
+
   <div class="g">
-    <div class="g-r g-item-row">
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
+    {% for gs in project_groups %}
+      <div class="g-r g-item-row">
+        {% for g in gs %}
+        <div class="g-r-c-6-12--lg g-r-c-6-12--md g-r-c-12--sm g-item-object">
+          {% if g.image %}
+            {% assign image_src = "images/" | append: g.image %}
+            <img src="{{ image_src }}" alt="project image for {{ g.title }}">
+          {% else %}
+            <img src="http://placehold.it/1200x600">
+          {% endif %}
+          <h3 class="g-item-title">{{ g.client }}</h3>
+          <div class="g-item-subtitle muted--2x"><span class="px1">{{ g.title }}</span> · <span class="px1">{{ g.date_range }}</span></div>
+          <div class="g-item-description">
+            {{ g.content }}
+          </div>
+          <div class="portfolio-categories">
+            {% for t in g.tags %}
+            <span class="portfolio-category">
+              <span class="caps">{{ t }}</span>
+            </span>
+            {% endfor %}
+          </div>
         </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
+        {% endfor %}
       </div>
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a very brief description.
-        </p>
-      </div>
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
-      </div>
-    </div>
-    <div class="g-r g-item-row">
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
-      </div>
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
-      </div>
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
-      </div>
-    </div>
-    <div class="g-r g-item-row">
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
-      </div>
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
-      </div>
-      <div class="g-r-c-4-12--lg g-r-c-4-12--md g-r-c-12--sm g-item-object">
-        <img src="images/js-code.png" alt="Some example code for a project">
-        <h4 class="g-item-title">Project Name <span class="muted--2x">- Some Client</span></h4>
-        <div class="post-categories">
-          <span class="post-category">
-            <a href="#" title="jekyll" class="dotted-link caps">jekyll</a>
-          </span>
-          <span class="post-category">
-            <a href="#" title="pixyll" class="dotted-link caps">pixyll</a>
-          </span>
-        </div>
-        <p class="g-item-description">
-          This is a brief description of the project. It can be of uneven length and not break
-          the grid because each row will grow to its tallest child's height.
-        </p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
