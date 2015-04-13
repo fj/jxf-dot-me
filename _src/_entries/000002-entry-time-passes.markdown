@@ -49,11 +49,11 @@ I started reflecting about some other events that have been "footprints in the s
 
 The table is an interesting starting point for getting our bearings, but big stretches of time are tough to internalize for many people. We can usually recall what we were doing a day ago with some fidelity. We can give the general outline of what happened ten days ago, maybe by consulting our calendar.
 
-But it would be difficult to remember what was happening one hundred days ago. And going back one thousand days -- about 2.7 years -- is likely to exceed any normal person's capabilities. You can probably remember big ongoing events, like where you lived and your major relationships and friendships, but little else.
+But it would be difficult to remember what was happening one hundred days ago. And going back one thousand days -- about 2.7 years -- is likely to exceed any normal person's capabilities. You can probably remember big ongoing events, like where you lived and your major relationships and friendships, but little else. These days are lost forever in the mists of time and memory.
 
 <aside>Drew Houston, the CEO of Dropbox, gave the 2013 MIT <a href="http://newsoffice.mit.edu/2013/commencement-address-houston-0607">commencement address</a>, where he describes coming to the realization that he's already 9,000 days down at age 24 and resolving to make his life different as a result.</aside>
 
-To put that in better perspective, citizens in the top one-third of countries by life expectancy can expect a mean lifespan of about <a href="http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy">eighty years</a>. That's about 30,000 days. By the time you hit your 27th birthday, you're down about 10,000 of those days.
+To put that in better perspective, citizens in the top one-third of countries by life expectancy can expect a mean lifespan of about <a href="http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy">eighty years</a>. That's about 30,000 days. By the time you hit your 27th birthday, you're down about 10,000 of those days -- and we can barely remember the overwhelming majority of them.
 
 In that milieu, what does a span of 10,000 days actually mean against your total lifespan? It's hard to get the same perspective there that we have for a single day or a week. What if we ask a more direct question: how much time do we have left, and how can we visualize that?
 
