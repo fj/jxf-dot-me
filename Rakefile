@@ -89,8 +89,14 @@ task :serve => [:clean, :build] do
   execute_command 'jekyll serve --verbose --config _src/_config.yml'
 end
 
+desc "write CNAME file for GitHub deployments"
+task :cname => [:build] do
+  logger.info log_message "writing CNAME"
+  execute_command %{echo 'jxf.me' > _out/CNAME}
+end
+
 desc "deploy site"
-task :deploy => [:build] do
+task :deploy => [:build, :cname] do
   logger.info log_message "deploying site"
   FileUtils.cd('_out') {
     execute_command 'rm -rf .git'
