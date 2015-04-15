@@ -1,5 +1,5 @@
 ---
-title:  Mentoring budding entrepreneurs
+title:  mentoring budding entrepreneurs
 client: HackCville
 image: portfolio-hackcville.jpg
 date_range: "2012 - 2015"
