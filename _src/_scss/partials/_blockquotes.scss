@@ -5,11 +5,16 @@ blockquote {
   padding: 1rem 1.5rem;
 }
 
+blockquote *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 blockquote footer cite {
   @extend .small;
   font-style: normal;
 }
 
 blockquote footer cite:before {
-  content: '- ';
+  content: '&emdash; ';
 }
