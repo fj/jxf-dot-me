@@ -30,7 +30,7 @@ Pages and posts suffice for most use cases. However, these have some limitations
 
 First, every post file must be named according to the format string `<YYYY>-<MM>-<DD>-<title>.<extension>`. Any post which doesn't have this form is invalid and throws an error.
 
-I found this to be an obnoxious limitation because I don't usually finish a post on the same day I start it. That means that the filename I make the post with reflects the day I started the post, not the day I finished the post. You can override the date that Jekyll actually outputs by using `date` in your [YAML front matter](jekyllrb.com/docs/frontmatter/), but then there's no point in also having a date in the filename, since it's redundant and never used.
+I found this to be an obnoxious limitation because I don't usually finish a post on the same day I start it. That means that the filename I make the post with reflects the day I started the post, not the day I finished the post. You can override the date that Jekyll actually outputs by using `date` in your [YAML front matter](http://jekyllrb.com/docs/frontmatter/), but then there's no point in also having a date in the filename, since it's redundant and never used.
 
 ## Inconsistent domain model of posts and pages
 
