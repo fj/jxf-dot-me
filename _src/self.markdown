@@ -7,6 +7,7 @@ title:  About Me
 >   Still, still the shadows stay:
 > My feet upon the moonlit dust
 >   Pursue the ceaseless way.</div>
+>
 > --- A.E. Housman, [A Shropshire Lad](http://www.bartleby.com/123/36.html)
 
 Hi, I'm **John Feminella**. I like to write software, build (and sometimes sell) companies, and give talks on things I'm learning about.
