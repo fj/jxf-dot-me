@@ -42,7 +42,7 @@ I started reflecting about some other events that have been "footprints in the s
 | Marty McFly's arrival in [the future](http://en.wikipedia.org/wiki/Back_to_the_Future_Part_II) | <span id="cd-back-to-the-future">&middot;</span> |
 | 2016 U.S. presidential election | <span id="cd-2016-election">&middot;</span> |
 | [Ray Kurzweil](http://en.wikipedia.org/wiki/Ray_Kurzweil)'s prediction for [the Singularity](http://en.wikipedia.org/wiki/Technological_singularity) | <span id="cd-singularity">&middot;</span> |
-| Halley's comet returns in 21^(st) century | <span id="cd-halleys-comet">&middot;</span> |
+| Halley's comet returns in 21<sup>st</sup> century | <span id="cd-halleys-comet">&middot;</span> |
 | world population reaches 10 billion | <span id="cd-10-billion-people">&middot;</span> |
 
 <aside>It turns out we have a hard time <a href="http://jbr.sagepub.com/content/13/5/437.short">estimating even shorter durations accurately</a>, like one hour. Success depends on factors like our mood, sleep, health, and attention span.</aside>
