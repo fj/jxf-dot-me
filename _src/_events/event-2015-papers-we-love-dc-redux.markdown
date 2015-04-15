@@ -1,6 +1,6 @@
 ---
 type:        lecture
-title:       "Papers We Love DC: Coresets"
+title:       "Redux: Papers We Love DC: Coresets"
 date:        2015-04-30
 description: >
   Discussing Dan Feldman's Ph.D. thesis, "Coresets and their applications".
