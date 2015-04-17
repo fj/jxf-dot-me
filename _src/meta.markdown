@@ -20,3 +20,7 @@ The fonts are [PT Sans](http://www.google.com/fonts/specimen/PT+Sans) from [Para
 # Name
 
 The name of the [blog](/blog.html), **Open Brackets**, reflects the appeal that the blank slate of software development holds for me. What follows a single `{` may be the most trivial beginner's program, or the most important piece of code ever written. And when we write the closing `}`, it is worth reflecting on whether what we wrote adds value to the world. Does it make you a happier person for having written it?
+
+# Source code
+
+The GitHub repository for the deployed version of the site is available [here](https://github.com/fj/fj.github.io). The original source code is [here](https://github.com/fj/jxf-dot-me).
