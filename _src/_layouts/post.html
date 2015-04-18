@@ -30,7 +30,7 @@ layout: measure-lg
         {{ content }}
       </article>
 
-      <div class="relative-navigation my2">
+      <div class="relative-navigation my2 clearfix">
         {% if page.previous.url %}
         <a style="float: left;" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
         {% endif %}
@@ -39,6 +39,20 @@ layout: measure-lg
         <a style="float: right;" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
         {% endif %}
       </div>
+
+      {% if page.subscribers %}
+        <div class="subscribers my2 muted--2x" style="border: 1px solid gray; padding: 1rem">
+          <h2>Want more?</h2>
+          {% include subscribers.html %}
+        </div>
+      {% endif %}
+
+      {% if page.comments %}
+        <div class="comments my2">
+          <h2>Comments</h2>
+          {% include comments.html %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

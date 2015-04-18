@@ -56,6 +56,8 @@ defaults:
       type: entries
     values:
       layout: post
+      comments: true
+      subscribers: true
   -
     scope:
       type: events
