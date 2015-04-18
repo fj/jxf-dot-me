@@ -1,5 +1,5 @@
 ---
-type:         snippet
+type:         post
 title:        "Fully-Featured Custom Collections in Jekyll"
 date:         2015-04-10T07:00:00Z
 tags:
