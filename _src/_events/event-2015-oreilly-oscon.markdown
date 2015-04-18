@@ -1,7 +1,7 @@
 ---
 type:        conference
 title:       "O'Reilly OSCON: \"Getting Under Your Hood: Cars and Computers\""
-date:        2015-05-27
+date:        2015-07-20
 description: >
   Presenting **Getting Under Your Hood: Cars and Computers**, a 40-minute talk.
 ---
