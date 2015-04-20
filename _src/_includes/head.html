@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% include description.content %}">
+  <meta name="description" content="Personal site for John Feminella: {% include description.content %}">
 
   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/c.min.css?t={{ site.time | date: '%s' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
