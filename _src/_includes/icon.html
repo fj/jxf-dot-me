@@ -19,6 +19,8 @@
     {% assign icon_class = 'video' %}
   {% when 'snippet', 'hackathon', 'experiment' %}
     {% assign icon_class = 'code' %}
+  {% when 'review' %}
+    {% assign icon_class = 'thumbs-o-up' %}
   {% else %}
     {% assign icon_class = 'unknown' %}
     !!! {{icon_type}} doesn't have a mapping. !!!
