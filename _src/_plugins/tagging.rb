@@ -36,7 +36,13 @@ module Jekyll
     end
 
     def computed_site_tags(site)
-      site.collections['entries'].docs.inject({}) do |h, d|
+      tags = site.collections['entries'].docs.inject({}) do |h, d|
+        # Add document type as a tag ('post', 'review', 'essay', etc.).
+        d.data['tags'] ||= []
+        d.data['tags'].unshift d.data['type']
+        h[d.data['type']] ||= []
+        h[d.data['type']] << d
+
         Array.new(d.data['tags']).each do |tag|
           h[tag] ||= []
           h[tag] << d
