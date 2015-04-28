@@ -10,7 +10,7 @@ layout: measure-lg
       </h3>
       <div class="muted--2x">
         {% include long-date.html date=page.date %}<br>
-        {{ content | number_of_words }} words
+        {% include word-count.html content=page.content %}
         <div class="post-categories">
           {% for tag in page.tags %}
             <div class="post-category">

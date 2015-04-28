@@ -8,7 +8,7 @@
       </h3>
       <div class="muted--2x">
         {% include long-date.html date=include.post.date %}<br>
-        {{ include.post.content | number_of_words }} words
+        {% include word-count.html content=include.post.content %}
         <div class="post-categories">
           {% for tag in include.post.tags %}
             <div class="post-category">
