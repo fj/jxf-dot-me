@@ -4,7 +4,7 @@ title:        "Time Passes"
 date:         2015-04-05T07:00:00Z
 tags:
   - thoughts
-  - experiments
+  - experiment
   - js
 description: >
   How much time do we have left?
