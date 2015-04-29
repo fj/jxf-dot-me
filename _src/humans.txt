@@ -1,0 +1,4 @@
+The following people have contributed code or prose to this site:
+
+* John Feminella (http://jxf.me)
+* John Otander (http://johnotander.com)
