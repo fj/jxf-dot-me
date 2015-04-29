@@ -5,6 +5,11 @@ blockquote {
   padding: 1rem 1.5rem;
 }
 
+blockquote *:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 blockquote *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;

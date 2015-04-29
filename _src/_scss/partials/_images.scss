@@ -1,6 +1,11 @@
 img, canvas {
   display: block;
-  margin-top: 0.5rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+article img {
+  margin-top: 0.5rem;
+  border-top: thin solid $off-white;
+  border-bottom: thin solid $off-white;
 }
