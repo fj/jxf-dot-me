@@ -10,11 +10,9 @@ title:  About Me
 >
 > --- A.E. Housman, [A Shropshire Lad](http://www.bartleby.com/123/36.html)
 
-Hi, I'm **John Feminella**. I like to write software, build (and sometimes sell) companies, and give talks on things I'm learning about.
+Hi, I'm **John Feminella**. I'm a human being living on [Earth](http://en.wikipedia.org/wiki/Earth), situated in the [Orion Arm](http://en.wikipedia.org/wiki/Orion_Arm) of the [Milky Way Galaxy](http://en.wikipedia.org/wiki/Milky_Way). I also like to write software, build (and sometimes sell) companies, and give talks on things I'm learning about.
 
 More about me:
-
-* Cofounder of [UpHex](http://uphex.com).
 
 * Builder of [things](/portfolio.html).
 
