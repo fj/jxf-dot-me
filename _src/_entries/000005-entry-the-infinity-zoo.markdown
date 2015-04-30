@@ -1,3 +1,4 @@
+---
 type:         post
 title:        "The Infinity Zoo: What is Infinity?"
 date:         2015-04-24T08:00:00Z
@@ -166,7 +167,7 @@ $$
 
 A counterintuitive result of this is that infinite sets which seem completely different in size can have the same cardinality, because we can often find a bijection between them. For example, the even natural numbers $$\{0, 2, 4, 6, \cdots\}$$ have the same cardinality as all natural numbers $$\{0, 1, 2, 3, \cdots\}$$.
 
-At first, this may be impossible to believe: how can a set with some of its elements missing be the same size as the original set? Such are the consequences of being infinite: things no longer behave the way you might expect! Groups of things certainly don't behave this way in the real world, which is
+At first, this may be impossible to believe: how can a set with some of its elements missing be the same size as the original set? Such are the consequences of being infinite: things no longer behave the way you might expect! Objects certainly don't behave this way in the real world.
 
 To see why it's true that the even natural numbers $$2\mathbb{N}$$ have the same cardinality as the natural numbers $$\mathbb{N}$$, imagine that our mapping $$\mathbb{N} \overset{f}{\mapsto} \mathbb{N}$$ is the function $$f(n) = 2n$$. Now we've defined a relationship between every natural number and every even number:
 
@@ -204,7 +205,7 @@ $$
   0_{\mathtt{ord}} \equiv \emptyset
 $$
 
-The second ordinal is constructed by the previous element and adding it to a set that contains that element. In this case, that means taking the union of the ordinal $$0_{\mathtt{ord}}$$ and a set containing it, or $$\{0_{\mathtt{ord}}\}$$. And since $$0_{\mathtt{ord}} = \emptyset$$, the empty set, that means we have $$\emptyset \cup \{\emptyset\}$$, so we wind up with just $$\{\emptyset\}$$:
+The second ordinal is constructed by taking the previous ordinal and adding it to a set that contains that ordinal. In this case, that means taking the union of the ordinal $$0_{\mathtt{ord}}$$ and a set containing it, or $$\{0_{\mathtt{ord}}\}$$. And since $$0_{\mathtt{ord}} = \emptyset$$, the empty set, that means we have $$\emptyset \cup \{\emptyset\}$$, so we wind up with just $$\{\emptyset\}$$:
 
 $$
   1_{\mathtt{ord}} \equiv 0_{\mathtt{ord}} \cup \{0_{\mathtt{ord}}\} = \{0_{\mathtt{ord}}\} = \{\emptyset\}
