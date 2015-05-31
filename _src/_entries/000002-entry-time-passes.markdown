@@ -2,6 +2,7 @@
 type:         experiment
 title:        "Time Passes"
 date:         2015-04-05T07:00:00Z
+published:    true
 tags:
   - thoughts
   - experiment

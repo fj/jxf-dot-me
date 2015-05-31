@@ -2,6 +2,7 @@
 type:         snippet
 title:        "Finding Out What Changed During Debian/Ubuntu Package Upgrades"
 date:         2015-05-22T08:00:00Z
+published:    true
 tags:
   - package-management
 description: >
