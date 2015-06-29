@@ -26,6 +26,24 @@ table {
   }
 }
 
+table.rotated-text {
+  tr:first-child {
+    border: none;
+  }
+  th {
+    height: 6em;
+    border: none;
+    background: none;
+    transform: translateX(1em) rotate(-45deg);
+    transform-origin: left bottom;
+    vertical-align: bottom;
+    white-space: nowrap;
+  }
+  th:first-child {
+    transform: none;
+  }
+}
+
 table tr th :first-child,
 table tr td :first-child {
   margin-top: 0;
