@@ -12,7 +12,7 @@
     padding: .5rem;
   }
 
-  .markdown-content > :not(aside):not(canvas) {
+  .markdown-content > :not(aside):not(canvas):not(.full-width) {
     margin-left: 0;
     width: 75%;
   }
