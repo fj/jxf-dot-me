@@ -304,6 +304,8 @@ If you're going anywhere else in the US, you'll probably take a short flight to 
 
 # You too?
 
-Making the choice about where to live is both difficult and deeply personal. While there are many objectively great reasons to live in Charlottesville, perhaps the biggest one for me is completely subjective: it just feels like home. I've loved living here, and would be hard-pressed to trade the experience for anywhere else. I hope you'll visit and feel the same way, too!
+Making the choice about where to live is both difficult and deeply personal. While there are many objectively great reasons to live in Charlottesville, perhaps the biggest one for me is completely subjective: it just feels like home.
+
+I've loved living here, and would be hard-pressed to trade the experience for anywhere else. I hope you'll visit and feel the same way, too!
 
 > **Acknowledgements.** Thank you to Kyle Redinger for his excellent [summary comment](https://www.reddit.com/r/CharlottesvilleTech/comments/399rny/what_startup_capital_options_are_there_for/cs1ocia) on the startup environment and to [Waldo Jaquith](https://waldo.jaquith.org/) for looking over my shoulder on this article.
