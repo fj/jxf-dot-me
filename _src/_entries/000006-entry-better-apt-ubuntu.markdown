@@ -9,7 +9,6 @@ description: >
   How do we see what's changed in an apt package before we install it?
 ---
 
-
 Like many Linux distributions, Debian comes with a package management and distribution system called _apt_ (Advanced Package Tool). While apt is  a very useful feature of Debian systems, upgrading packages can be a little daunting. Here's what a recent `apt-get upgrade`{:.shell} looked like for me:
 
 ```
