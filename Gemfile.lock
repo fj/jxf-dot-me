@@ -70,3 +70,6 @@ DEPENDENCIES
   sass
   scss-lint
   titleize
+
+BUNDLED WITH
+   1.10.3
