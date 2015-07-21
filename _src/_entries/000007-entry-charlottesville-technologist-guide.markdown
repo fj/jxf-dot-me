@@ -37,9 +37,9 @@ Charlottesville consistently wins accolades like ["best place to live in America
 
 ## People
 
-It's difficult to generalize broadly about Charlottesville residents because they tend to be from all walks of life, status, and birthplace. While there's a sizable contingent of people who lived and grew up nearby, the majority were attracted by jobs or the University. The median income, wealth, and education for Charlottesville residents is above the national average in all cases, and Virginia as a state scores well on these metrics relative to other states. Similarly, [most people who live in Virginia were not born in Virginia](http://www.nytimes.com/interactive/2014/08/13/upshot/where-people-in-each-state-were-born.html?abt=0002&abg=1#Virginia), and that's especially true in Charlottesville.
+It's a challenge to generalize broadly about Charlottesville residents. They tend to be from all walks of life, status, and birthplace. While there's a sizable contingent of people who lived and grew up nearby, the majority were attracted by jobs or the University. The median income, wealth, and education for Charlottesville residents is above the national average in all cases, and Virginia as a state scores well on these metrics relative to other states. Similarly, [most people who live in Virginia were not born in Virginia](http://www.nytimes.com/interactive/2014/08/13/upshot/where-people-in-each-state-were-born.html?abt=0002&abg=1#Virginia), and that's especially true in Charlottesville.
 
-Charlottesville is a predominantly liberal city situated in a broader rural region, Virginia's [Fifth District](https://en.wikipedia.org/wiki/Virginia's_5th_congressional_district), that skews conservative. This is evident in a lot of election results, for example, where Charlottesville will tend to vote for the more progressive candidate in a contested race, while the broader district votes for the more conservative candidate.
+Charlottesville is a predominantly liberal city situated in a broader rural region, Virginia's [Fifth Congressional District](https://en.wikipedia.org/wiki/Virginia's_5th_congressional_district), that skews conservative. This is evident in a lot of election results, for example, where Charlottesville will tend to vote for the more progressive candidate in a contested race, while the broader district votes for the more conservative candidate.
 
 ## Climate and location
 
@@ -151,6 +151,8 @@ Charlottesville's general quality of life is excellent, especially given the low
 | walkability score at median rent | 71 | 89 | <span>96</span>{:.best} | 95 |
 {:.rotated-text.full-width.small}
 
+## Major concerns
+
 While most residents give Charlottesville high marks across the board relative to similar cities, it's not without complaints. When Charlottesville citizens express concerns, the majority of them fall into one of three big areas:
 
 * **Traffic and parking.** Peak traffic spikes very high during specific weekends -- football games, the University of Virginia graduation and move-in weeks, and major John Paul Jones Arena or Pavilion concerts. While Charlottesville has a rush hour, it doesn't last very long, usually about 30 to 45 minutes in the mornings and evenings. Free parking is in very limited supply near the Downtown Mall, especially during big events, when you'll almost always have to use one of the nearby parking garages.
@@ -160,6 +162,14 @@ While most residents give Charlottesville high marks across the board relative t
 * **Safety.** Charlottesville's crime rate is [about 10% below than the national average](www.city-data.com/crime/crime-Charlottesville-Virginia.html) on a per-capita basis. However, a number of high-profile crime cases have hit Charlottesville in the past few years, drawing unwanted national media coverage. Some of these come from reported incidents at the University of Virginia, which generates a higher than average quantity of nonviolent crimes like theft, vandalism, and public drunkenness. The overall crime rate is also on the decline, having steadily trended downwards every year in the last two decades. 96% of Charlottesville residents say they feel safe in their neighborhoods.
 
 > Sources: [Zumper](https://www.zumper.com/blog/2015/03/zumper-us-rent-report-february-2015/), [Tax Foundation](http://taxfoundation.org/article/state-and-local-sales-tax-rates-2015), [US Census Bureau ACS PUMS](http://www.census.gov/programs-surveys/acs/technical-documentation/pums.html), [National Community Survey](http://www.charlottesville.org/Index.aspx?page=3401).
+
+## Challenges
+
+There are also some secondary problems that may be of particular interest to younger professionals moving here:
+
+* **Dating is tough.** A significant fraction of the twentysomething dating pool is at the University. That means that there may be an implicit time bomb attached to any relationships you strike up if you date a student: once your prospective partner's graduation date approaches, there's a choice to make.
+
+* **No coherent vision from the City.** A secondary complaint from a lot of professionals is that the city doesn't offer any kind of idea of what the future is like for technology. The city doesn't directly fund any major technology initiatives, doesn't particularly encourage economic development of technology-industry firms any more than others, and so on. The absence of any signals about the local government's intent, coupled with limited opportunities for advancement in tech fields that aren't directly related to or supporting software development, can make staying in Charlottesville a career-hurting move compared to a city more favorably inclined to technologists.
 
 # Technology jobs and community
 
@@ -173,10 +183,13 @@ Other interesting technology employers of note include (but are certainly not li
 
 * [ArcheMedX](http://www.archemedx.com/), healthcare informatics and e-learning provider for clinical professionals.
 * [Borrowed and Blue](http://www.borrowedandblue.com/), wedding marketplace startup connecting vendors with couples.
+* [CCRi](http://ccri.com), software engineering and data science company.
 * [CFA Institute](https://www.cfainstitute.org/pages/index.aspx), global nonprofit for investment professionals that provides the [CFA accreditation](http://en.wikipedia.org/wiki/Chartered_Financial_Analyst).
 * [Crutchfield](https://www.crutchfield.com), national audio electronics retailer that was one of the first Internet retailers.
+* [Elder Research](http://datamininglab.com/), a data science company whose CEO wrote [one of the definitive texts](http://amzn.to/1MvjO53) on data mining.
 * [FireEye](https://www.fireeye.com/), public company offering network threat forensics and malware protection.
 * [General Electric Intelligent Platforms](http://www.geautomation.com/), industrial engineering venture of General Electric.
+* [Open Source Connections](http://opensourceconnections.com), search relevance 
 * [PsiKick](http://www.psikick.com/), designs ultra-low-power wireless chips with widespread industrial and commercial applications.
 * [Quantitative Investment Management](https://www.quantitative.com/), one of the world's largest managed-futures hedge funds.
 * [Relay Foods](https://www.relayfoods.com), online grocery delivery and shopping service.
@@ -302,10 +315,14 @@ If you're going anywhere else in the US, you'll probably take a short flight to 
 * Chicago, IL	(ORD) via American Eagle
 * New York, NY (LGA) via Delta, American Eagle
 
-# You too?
+# You too, perhaps?
 
 Making the choice about where to live is both difficult and deeply personal. While there are many objectively great reasons to live in Charlottesville, perhaps the biggest one for me is completely subjective: it just feels like home.
 
 I've loved living here, and would be hard-pressed to trade the experience for anywhere else. I hope you'll visit and feel the same way, too!
 
-> **Acknowledgements.** Thank you to Kyle Redinger for his excellent [summary comment](https://www.reddit.com/r/CharlottesvilleTech/comments/399rny/what_startup_capital_options_are_there_for/cs1ocia) on the startup environment and to [Waldo Jaquith](https://waldo.jaquith.org/) for looking over my shoulder on this article.
+> **Acknowledgements.** Thank you to: 
+> * Kyle Redinger for his excellent [summary comment](https://www.reddit.com/r/CharlottesvilleTech/comments/399rny/what_startup_capital_options_are_there_for/cs1ocia) on the startup environment; and
+> * [Waldo Jaquith](https://waldo.jaquith.org/) and [Spencer Ingram](http://beingspencer.com/) for looking over my shoulder on this article
+> 
+> Any errors or mistakes are entirely my own.
