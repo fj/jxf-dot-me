@@ -1,12 +1,12 @@
 ---
 type:        conference
 title:       "Automacon: \"Continuous Everything\""
-date:        2015-07-20
+date:        2015-09-15
 description: >
   Presenting **Continuous Everything**, a 20-minute talk.
 ---
 
-I'm presenting **Continuous Everything** at [Automacon 2015]. It will be a 20-minute recorded talk.
+I'm presenting **Continuous Everything** at [Automacon 2015](www.automacon.io) from September 15-17 in Portland, Oregon. It will be a 20-minute recorded talk.
 
 ### Abstract
 
