@@ -5,8 +5,8 @@
   </div>
 
   <ul class="list">
-    {% assign sorted_events = site.events | sort:'date' | reverse | limit:5 %}
-    {% for event in sorted_events %}
+    {% assign sorted_events = site.events | sort:'date' | reverse %}
+    {% for event in sorted_events limit:5 %}
       {% include list-item-compact.html list_item=event %}
     {% endfor %}
   </ul>
