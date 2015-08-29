@@ -13,3 +13,7 @@ Personal blog and portfolio site.
 
 This is a [Jekyll](http://jekyllrb.com) project which uses [Rake](https://github.com/ruby/rake)
 for tasks regarding static assets.
+
+## Environment
+
+An environment file (`.env`) is expected to exist. If it doesn't, an error will be raised.

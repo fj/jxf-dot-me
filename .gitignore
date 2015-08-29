@@ -7,3 +7,6 @@ node_modules
 _out
 _src/assets
 .jekyll-metadata
+
+# configuration files
+.env

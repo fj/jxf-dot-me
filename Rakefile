@@ -5,6 +5,9 @@ require 'yaml'
 require 'logger'
 require 'open3'
 
+require 'dotenv'
+Dotenv.load!
+
 def logger
   @logger ||= Logger.new(STDOUT).tap { |l|
     l.level = Logger::DEBUG
@@ -28,6 +31,15 @@ end
 def configuration_for(key)
   keys = key.split('.')
   keys.inject(configuration) { |h, k| h = h[k] }
+end
+
+namespace :environment do
+  desc 'report environment variables'
+  task 'show' do
+    ENV.keys.sort.each do |key|
+      logger.debug "#{key}=#{ENV[key]}"
+    end
+  end
 end
 
 namespace :assets do
