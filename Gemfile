@@ -13,6 +13,9 @@ gem 'nokogiri'
 gem 'sass'
 gem 'scss-lint'
 
+# Environment management
+gem 'dotenv'
+
 group :development do
   gem 'byebug'
   gem 'pry'
