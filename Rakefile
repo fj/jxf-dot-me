@@ -42,19 +42,19 @@ module AssetMapper
 
   class AwsS3Mapper
     attr_reader :destination
-    attr_reader :project_root
+    attr_reader :asset_root
 
     def self.deployer
       mapper = self.new(
         's3://assets.jxf.me/',
-        '_src'
+        '_src/assets'
       )
       AssetDeployer::S3Deployer.new(mapper)
     end
 
-    def initialize(destination, project_root)
+    def initialize(destination, asset_root)
       @destination  = destination
-      @project_root = project_root
+      @asset_root = asset_root
     end
 
     def credentials
@@ -65,12 +65,12 @@ module AssetMapper
       AssetMapper::ASSET_DIRECTORIES
     end
 
-    def source_for(asset_path_from_project_root)
-      File.join(project_root, asset_path_from_project_root)
+    def source_for(asset_path_from_asset_root)
+      File.join(asset_root, asset_path_from_asset_root)
     end
 
-    def destination_for(asset_path_from_project_root)
-      File.join(destination, asset_path_from_project_root)
+    def destination_for(asset_path_from_asset_root)
+      File.join(destination, asset_path_from_asset_root)
     end
   end
 end
@@ -105,7 +105,7 @@ class AssetDeployer
     private
 
     def issue_s3_command(command)
-      execute_command "s3cmd #{command} --access_key=#{aws_access_key_id} --secret_key=#{aws_secret}"
+      execute_command "s3cmd --access_key=#{aws_access_key_id} --secret_key=#{aws_secret} #{command}"
     end
 
     def make_bucket(destination)
@@ -117,11 +117,6 @@ class AssetDeployer
       issue_s3_command "sync --delete-removed -H --verbose #{local} #{remote}"
     end
   end
-end
-
-desc 'sample S3 deployment task'
-task :s3 do
-  AssetMapper::AwsS3Mapper.deployer.deploy
 end
 
 namespace :environment do
@@ -168,10 +163,15 @@ namespace :assets do
   task 'js:lint' => ['assets:js:compile'] do
     raise NotImplementedError.new('no processing pipeline for JS files yet')
   end
+
+  desc 'synchronize with remote assets'
+  task :synchronize_remote do
+    AssetMapper::AwsS3Mapper.deployer.deploy
+  end
 end
 
 desc "build assets"
-task :assets => ['assets:css:compile']
+task :assets => ['assets:css:compile', 'assets:synchronize_remote']
 
 desc "build site"
 task :build => [:assets] do
