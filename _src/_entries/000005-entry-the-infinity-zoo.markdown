@@ -14,7 +14,7 @@ description: >
 >   And Heaven in a wild flower,
 > Hold Infinity in the palm of your hand,
 >   And Eternity in an hour.</div>
-> 
+>
 > William Blake, "Auguries of Innocence"
 
 Infinity is an idea that has fascinated humans for a long time. To some it can seem inscrutable. For others, it symbolizes the mystical or spiritual. For mathematicians, it's a tool that's essential to working with and understanding the behavior of many things -- although it's been a point of strong historical controversy.
@@ -23,14 +23,14 @@ But what _is_ infinity, exactly? It turns out there are many kinds and instances
 
 # Actual and potential infinity
 
-![a perspective shot of a building in Toronto stretching into the sky]({{ page.image_path }}/toronto-skyscraper.jpg)
+![a perspective shot of a building in Toronto stretching into the sky]({{ page.image_asset_path }}/toronto-skyscraper.jpg)
 
 A tower in Toronto's financial district stretches high into the evening sky. [Source.](https://flic.kr/p/nDw3D3)
 {:.caption}
 
 People have been grappling with the philosophy of infinity for centuries, and mathematics is no exception. The ancients, especially Indian, Greek, and Arab mathematicians, readily entertained the notion of two kinds of infinity. One kind was called _potential infinity_; the Greeks called it [apeiron](http://en.wikipedia.org/wiki/Apeiron_%28cosmology%29) (ἄπειρον, "without end"). The other kind was called _actual infinity_.
 
-![diagram describing potential infinity]({{ page.image_path }}/chart-entry-potential-infinity.png)
+![diagram describing potential infinity]({{ page.image_asset_path }}/chart-entry-potential-infinity.png)
 
 Potential infinity allows a process to be repeated as many times as you would like -- for example, adding a new number to a list -- but no matter when you stop, the result is always finite.
 {:.caption}
@@ -119,7 +119,7 @@ Our third example, the length of $$ 0, 1, 2, 3, \cdots $$, looks more promising.
 
 Is this infinity, at last? And if so, is it just the integer that goes at the end of the natural number line, as shown below?
 
-![diagram showing the integers with infinity as a point on the line]({{ page.image_path }}/chart-entry-infinity-number-line.png)
+![diagram showing the integers with infinity as a point on the line]({{ page.image_asset_path }}/chart-entry-infinity-number-line.png)
 
 A little thinking will show this idea can't work. Suppose we assume that $$\infty$$ can be defined as "the largest natural number" and we can place it on the number line somewhere.
 
@@ -132,7 +132,7 @@ By the same token, we can see that infinity can't be the largest integer, the la
 
 So the definition of infinity as "the largest natural number" doesn't work very well. $$\infty$$ here seems more like it's not on the number line at all. It's just an extreme, unattainable limit:
 
-![diagram showing the integers with infinity as an extremum]({{ page.image_path }}/chart-entry-infinity-number-line-infinity-end.png)
+![diagram showing the integers with infinity as an extremum]({{ page.image_asset_path }}/chart-entry-infinity-number-line-infinity-end.png)
 
 # Infinity and numbers: properties
 
@@ -172,7 +172,7 @@ At first, this may be impossible to believe: how can a set with some of its elem
 
 To see why it's true that the even natural numbers $$2\mathbb{N}$$ have the same cardinality as the natural numbers $$\mathbb{N}$$, imagine that our mapping $$\mathbb{N} \overset{f}{\mapsto} \mathbb{N}$$ is the function $$f(n) = 2n$$. Now we've defined a relationship between every natural number and every even number:
 
-![diagram showing a mapping of natural numbers to even natural numbers]({{ page.image_path }}/chart-entry-set-cardinality.png)
+![diagram showing a mapping of natural numbers to even natural numbers]({{ page.image_asset_path }}/chart-entry-set-cardinality.png)
 
 If we can define a bijection between any two sets, like we do here, we know they must be the same cardinality.
 {:.caption}
@@ -230,7 +230,7 @@ Just as cardinal numbers are the possible answers to the question, "How many ele
   * the smallest element
   * the second smallest element
   * the largest element
-  
+
 We could label those three elements as a sequence $$(0, 1, 2)$$. The cardinality of the set for this sequence would be $$\vert S \vert = 3$$, so the order type is the same as the set's size. In other words, the ordinality and cardinality of finite sets are always the same. That's not very interesting. It's only when we consider infinite sets that they become useful.
 
 ## Ordering the ordinals
@@ -317,7 +317,7 @@ And here's the most important part: the cardinality of all the limit ordinals, f
 
 The choice of infinite structure we make -- the choice of what to consider important when arranging elements, and what rules we choose to follow and break -- is the source of a lot of counterintuitive ideas about infinity. Our notion of "size", as represented in cardinality, is _only one notion_ out of the _infinite_ possible ways to define it. And cardinality ignores many properties of structure that we consider important in our everyday experiences.
 
-![the cardinality of the line and the plane are the same]({{ page.image_path }}/chart-entry-cardinality-line-plane.png)
+![the cardinality of the line and the plane are the same]({{ page.image_asset_path }}/chart-entry-cardinality-line-plane.png)
 
 The cardinality of any line and any plane are the same, since we can construct a bijection between any point on the line and any point on the plane.
 {:.caption}

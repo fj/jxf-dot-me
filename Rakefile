@@ -33,6 +33,92 @@ def configuration_for(key)
   keys.inject(configuration) { |h, k| h = h[k] }
 end
 
+module AssetMapper
+  ASSET_DIRECTORIES = [
+    'fonts/',
+    'images/',
+    'resources/'
+  ]
+
+  class AwsS3Mapper
+    attr_reader :destination
+    attr_reader :asset_root
+
+    def self.deployer
+      mapper = self.new(
+        's3://assets.jxf.me/',
+        '_src/assets'
+      )
+      AssetDeployer::S3Deployer.new(mapper)
+    end
+
+    def initialize(destination, asset_root)
+      @destination  = destination
+      @asset_root = asset_root
+    end
+
+    def credentials
+      ENV
+    end
+
+    def asset_directories
+      AssetMapper::ASSET_DIRECTORIES
+    end
+
+    def source_for(asset_path_from_asset_root)
+      File.join(asset_root, asset_path_from_asset_root)
+    end
+
+    def destination_for(asset_path_from_asset_root)
+      File.join(destination, asset_path_from_asset_root)
+    end
+  end
+end
+
+class AssetDeployer
+  class BaseDeployer
+    attr_reader :mapper
+    attr_reader :credentials
+
+    def initialize(mapper)
+      @mapper      = mapper
+      @credentials = mapper.credentials
+    end
+  end
+
+  class S3Deployer < BaseDeployer
+    def aws_access_key_id
+      credentials.fetch('AWS_ACCESS_KEY_ID')
+    end
+
+    def aws_secret
+      credentials.fetch('AWS_SECRET_ACCESS_KEY')
+    end
+
+    def deploy
+      make_bucket mapper.destination
+      mapper.asset_directories.each do |dir|
+        deploy_files mapper.source_for(dir), mapper.destination_for(dir)
+      end
+    end
+
+    private
+
+    def issue_s3_command(command)
+      execute_command "s3cmd --access_key=#{aws_access_key_id} --secret_key=#{aws_secret} #{command}"
+    end
+
+    def make_bucket(destination)
+      issue_s3_command "mb #{destination} --verbose"
+    end
+
+    def deploy_files(local, remote)
+      issue_s3_command "sync -H --verbose #{remote} #{local}"
+      issue_s3_command "sync --delete-removed -H --verbose #{local} #{remote}"
+    end
+  end
+end
+
 namespace :environment do
   desc 'report environment variables'
   task 'show' do
@@ -77,10 +163,15 @@ namespace :assets do
   task 'js:lint' => ['assets:js:compile'] do
     raise NotImplementedError.new('no processing pipeline for JS files yet')
   end
+
+  desc 'synchronize with remote assets'
+  task :synchronize_remote do
+    AssetMapper::AwsS3Mapper.deployer.deploy
+  end
 end
 
 desc "build assets"
-task :assets => ['assets:css:compile']
+task :assets => ['assets:css:compile', 'assets:synchronize_remote']
 
 desc "build site"
 task :build => [:assets] do

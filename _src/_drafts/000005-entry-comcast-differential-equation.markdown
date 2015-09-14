@@ -11,7 +11,7 @@ description: >
 
 Suppose that your ISP were maximally evil.
 
-![comcast logo]({{ page.image_path }}/comcast.jpg)
+![comcast logo]({{ page.image_asset_path }}/comcast.jpg)
 
 maximally evil differential equation
 

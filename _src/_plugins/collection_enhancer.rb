@@ -21,7 +21,7 @@ module Jekyll
         constructed_slug = doc_title
         Jekyll.logger.info "writing slug for #{refname}: #{constructed_slug}"
         d.data['permalink'] = "/#{collection_name}/#{constructed_slug}/"
-        
+
         if !doc_id.empty?
           Jekyll.logger.info "writing document id for #{d.basename_without_ext}: #{collection_name}-#{doc_id}"
           d.data['doc_id'] = "#{collection_name}-#{doc_id}"
@@ -48,8 +48,9 @@ module Jekyll
     def assign_asset_paths(collection_name, collection)
       collection.docs.each do |d|
         _, doc_id, doc_title = collection_segments_for(d, refname_for(collection))
-        d.data['image_path'] = "/images/#{collection_name}/#{doc_id}"
-        Jekyll.logger.info "adding image path for #{d.path}: #{d.data['image_path']}"
+        d.data['asset_path'] = "//s3.amazonaws.com/assets.jxf.me"
+        d.data['image_asset_path'] = "#{d.data['asset_path']}/images/#{collection_name}/#{doc_id}"
+        Jekyll.logger.info "adding image path for #{d.path}: #{d.data['image_asset_path']}"
       end
     end
 

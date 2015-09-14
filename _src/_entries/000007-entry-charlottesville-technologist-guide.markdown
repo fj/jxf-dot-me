@@ -18,7 +18,7 @@ It's difficult to describe the advantages and disadvantages of Charlottesville s
 
 # Brief local history
 
-![serpentine walls at the University of Virginia]({{ page.image_path }}/charlottesville-serpentine.jpeg)
+![serpentine walls at the University of Virginia]({{ page.image_asset_path }}/charlottesville-serpentine.jpeg)
 
 Serpentine walls at the University of Virginia. [Source.](https://en.wikipedia.org/wiki/University_of_Virginia#/media/File:Serpentine_wall_UVa_daffodils_2010.jpg)
 {:.caption}
@@ -43,7 +43,7 @@ Charlottesville is a predominantly liberal city situated in a broader rural regi
 
 ## Climate and location
 
-![Blue Ridge Mountains]({{ page.image_path }}/blue-ridge-mountains-fall.jpeg)
+![Blue Ridge Mountains]({{ page.image_asset_path }}/blue-ridge-mountains-fall.jpeg)
 
 Blue Ridge Mountains in the fall. The scenic [Skyline Drive](http://www.nps.gov/shen/planyourvisit/driving-skyline-drive.htm) winds through the trees.
 {:.caption}
@@ -101,7 +101,7 @@ Perhaps the most important reference point for prospective technological citizen
 
 # Cost of living
 
-![Downtown Mall]({{ page.image_path }}/charlottesville-downtown-mall.jpeg)
+![Downtown Mall]({{ page.image_asset_path }}/charlottesville-downtown-mall.jpeg)
 
 Charlottesville's Downtown Mall on a quiet winter evening.
 {:.caption}
@@ -256,7 +256,7 @@ Charlottesville residents enjoy some of the best commutes in the country; the me
 
 ## Traffic
 
-![map of major roads in Charlottesville]({{ page.image_path }}/charlottesville-major-roads-map.png)
+![map of major roads in Charlottesville]({{ page.image_asset_path }}/charlottesville-major-roads-map.png)
 
 Routes in blue include Charlottesville's highest-volume roads.
 {:.caption}

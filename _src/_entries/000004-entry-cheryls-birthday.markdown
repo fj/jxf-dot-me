@@ -15,7 +15,7 @@ The "Cheryl's Birthday" problem has attracted a lot of press, with [CNN](http://
 
 There's plenty of explanations that give a good overview of the problem and show you how to work out the solution to the problem via a series of logical deductions. But what if we could just ask a computer to find the answer for us?
 
-![chocolate cake with the text 'Happy Birthday, Cheryl' written in frosting]({{ page.image_path }}/cheryl.jpg)
+![chocolate cake with the text 'Happy Birthday, Cheryl' written in frosting]({{ page.image_asset_path }}/cheryl.jpg)
 
 # The problem
 
