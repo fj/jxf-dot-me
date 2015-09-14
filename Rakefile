@@ -109,10 +109,12 @@ class AssetDeployer
     end
 
     def make_bucket(destination)
+      execute_command "mkdir -p #{mapper.asset_root}"
       issue_s3_command "mb #{destination} --verbose"
     end
 
     def deploy_files(local, remote)
+      execute_command "mkdir -p #{local}"
       issue_s3_command "sync -H --verbose #{remote} #{local}"
       issue_s3_command "sync --delete-removed -H --verbose #{local} #{remote}"
     end
