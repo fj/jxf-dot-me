@@ -2,10 +2,18 @@
 title: John Feminella
 email: jxf@jxf.me
 
+assets:
+  root: "https://s3.amazonaws.com/assets.jxf.me"
+  directories:
+    - fonts
+    - images
+    - resources
+    - stylesheets
+
 mappings:
   scss:
     source: _src/_scss
-    output: _src/assets/css
+    output: _src/assets/stylesheets
 
 # Url settings
 baseurl: ""

@@ -30,15 +30,11 @@ end
 
 def configuration_for(key)
   keys = key.split('.')
-  keys.inject(configuration) { |h, k| h = h[k] }
+  keys.inject(configuration) { |h, k| h = h.fetch(k) }
 end
 
 module AssetMapper
-  ASSET_DIRECTORIES = [
-    'fonts/',
-    'images/',
-    'resources/'
-  ]
+  ASSET_DIRECTORIES = configuration_for('assets.directories')
 
   class AwsS3Mapper
     attr_reader :destination
@@ -46,7 +42,7 @@ module AssetMapper
 
     def self.deployer
       mapper = self.new(
-        's3://assets.jxf.me/',
+        "s3://#{ENV.fetch('SITE_S3_ASSET_BUCKET')}",
         '_src/assets'
       )
       AssetDeployer::S3Deployer.new(mapper)
@@ -66,11 +62,11 @@ module AssetMapper
     end
 
     def source_for(asset_path_from_asset_root)
-      File.join(asset_root, asset_path_from_asset_root)
+      File.join(asset_root, asset_path_from_asset_root, '/')
     end
 
     def destination_for(asset_path_from_asset_root)
-      File.join(destination, asset_path_from_asset_root)
+      File.join(destination, asset_path_from_asset_root, '/')
     end
   end
 end
@@ -115,8 +111,8 @@ class AssetDeployer
 
     def deploy_files(local, remote)
       execute_command "mkdir -p #{local}"
-      issue_s3_command "sync -H --verbose #{remote} #{local}"
-      issue_s3_command "sync --delete-removed -H --verbose #{local} #{remote}"
+      issue_s3_command "sync -H -M --no-mime-magic --verbose #{local} #{remote}"
+      issue_s3_command "sync -H -M --no-mime-magic --verbose --delete-removed #{remote} #{local}"
     end
   end
 end

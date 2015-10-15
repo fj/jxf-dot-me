@@ -13,8 +13,9 @@ layout: measure-lg
         {% for g in gs %}
         <div class="g-r-c-6-12--lg g-r-c-6-12--md g-r-c-12--sm g-item-object">
           {% if g.image %}
-            {% assign image_src = "images/" | append: g.image %}
-            <img src="{{ image_src }}" alt="project image for {{ g.title }}">
+            <!-- TODO: USE ASSET TAGS HERE -->
+            {% assign image_src = "" | append: g.image %}
+            <img src="{{ site.assets.root }}/images/{{ image_src }}" alt="project image for {{ g.title }}">
           {% else %}
             <img src="http://placehold.it/1200x600">
           {% endif %}
