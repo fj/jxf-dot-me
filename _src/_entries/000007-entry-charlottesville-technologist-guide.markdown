@@ -140,7 +140,7 @@ table .very-bad {
 
 # Quality of life
 
-Charlottesville's general quality of life is excellent, especially given the low cost of living. About 90% of Charlottesville residents rated it an "excellent" or "good" place to live, according to the 2014 National Community Survey. 
+Charlottesville's general quality of life is excellent, especially given the low cost of living. About 90% of Charlottesville residents rated it an "excellent" or "good" place to live, according to the 2014 National Community Survey.
 
 | property | <span>San Francisco, CA</span>{:.muted--3x} | <span>New York, NY</span>{:.muted--3x} | <span>Washington, DC</span>{:.muted--3x} | Charlottesville, VA |
 | ---- |:----:|:----:|:----:|:----:|:----:|
@@ -189,7 +189,7 @@ Other interesting technology employers of note include (but are certainly not li
 * [Elder Research](http://datamininglab.com/), a data science company whose CEO wrote [one of the definitive texts](http://amzn.to/1MvjO53) on data mining.
 * [FireEye](https://www.fireeye.com/), public company offering network threat forensics and malware protection.
 * [General Electric Intelligent Platforms](http://www.geautomation.com/), industrial engineering venture of General Electric.
-* [Open Source Connections](http://opensourceconnections.com), search relevance 
+* [Open Source Connections](http://opensourceconnections.com), search relevance
 * [PsiKick](http://www.psikick.com/), designs ultra-low-power wireless chips with widespread industrial and commercial applications.
 * [Quantitative Investment Management](https://www.quantitative.com/), one of the world's largest managed-futures hedge funds.
 * [Relay Foods](https://www.relayfoods.com), online grocery delivery and shopping service.
@@ -216,7 +216,7 @@ Here's a list of statistically-significant phrases for the Charlottesville job m
 | Python     | <span style="color: steelblue">██▌</span> 2.5 × |
 | .NET       | <span style="color: steelblue">██</span> 2 × |
 
-Notice it's top-heavy on sensors and medical applications; the top-ranking term, [Epic](http://en.wikipedia.org/wiki/Epic_Systems), is a healthcare software provider. Charlottesville has an outsize funding presence in biomedical startups and applications, owing to the influence of the University of Virginia in this domain. 
+Notice it's top-heavy on sensors and medical applications; the top-ranking term, [Epic](http://en.wikipedia.org/wiki/Epic_Systems), is a healthcare software provider. Charlottesville has an outsize funding presence in biomedical startups and applications, owing to the influence of the University of Virginia in this domain.
 
 ## Startups
 
@@ -321,8 +321,9 @@ Making the choice about where to live is both difficult and deeply personal. Whi
 
 I've loved living here, and would be hard-pressed to trade the experience for anywhere else. I hope you'll visit and feel the same way, too!
 
-> **Acknowledgements.** Thank you to: 
+> **Acknowledgements.** Thank you to:
+>
 > * Kyle Redinger for his excellent [summary comment](https://www.reddit.com/r/CharlottesvilleTech/comments/399rny/what_startup_capital_options_are_there_for/cs1ocia) on the startup environment; and
 > * [Waldo Jaquith](https://waldo.jaquith.org/) and [Spencer Ingram](http://beingspencer.com/) for looking over my shoulder on this article
-> 
-> Any errors or mistakes are entirely my own.
+>
+> Any errors or omissions are entirely my own.
