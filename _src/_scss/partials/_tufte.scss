@@ -1,0 +1,79 @@
+input.margin-toggle { 
+    display: none; 
+}
+
+label.sidenote-number { 
+    display: inline; 
+}
+
+label.margin-toggle:not(.sidenote-number) { 
+    display: none; 
+}
+
+//Sidenote styling
+.sidenote, 
+.marginnote { 
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: $serif-font-family;
+    font-size: 0.88rem;
+    opacity: 0.75;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.sidenote-number { 
+	counter-increment: sidenote-counter; 
+}
+
+.sidenote-number:after, 
+.sidenote:before { 
+	content: counter(sidenote-counter) " ";
+    position: relative;
+    vertical-align: baseline;
+    font-family: $serif-font-family;
+    font-size: 0.88rem;
+}
+
+//The sidenote number in margin
+.sidenote-number:after { 
+	content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem; }
+
+//The sidenote number in paragraph
+.sidenote:before { 
+	content: counter(sidenote-counter) " ";
+    top: -0.5rem; 
+    opacity: 0.75;
+}
+
+//Tufte-CSS Responsive Sidenote & Margins
+//At small widths, sidenote will be hidden by default, but togglable to show/hide
+@media (max-width: 760px) { 
+  label.margin-toggle:not(.sidenote-number) { 
+        display: inline; 
+    }
+    .sidenote, .marginnote { 
+        display: none; 
+    }
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote { 
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative; 
+    }
+    label { 
+        cursor: pointer; 
+    }
+}
