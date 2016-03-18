@@ -38,6 +38,7 @@ markdown:     kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  hard_wrap: false
 
 exclude:     ['node_modules', 'gulpfile.js', 'package.json', 'Gemfile', 'Gemfile.lock', 'divshot.json', '.divshot-cache']
 
