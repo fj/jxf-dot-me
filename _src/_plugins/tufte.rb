@@ -1,18 +1,20 @@
 module Jekyll
   class MarginNotes < Liquid::Block
     alias_method :render_block, :render
-    @@margincount = 0;
+    @@margincount = Hash.new(0)
 
     def initialize(tag_name, reference, tokens)
       super
       @reference = reference
-      @@margincount += 1;
-      if @reference !~ /[^[:space:]]/
-        @reference = "marginnote-#{@@margincount}";
-      end
     end
 
     def render(context)
+      # If reference is not manually set, use the automatic increment system
+      page_url = context.environments.first["page"]["url"]
+      @@margincount[page_url] += 1
+      if @reference !~ /[^[:space:]]/
+        @reference = "marginnote-#{@@margincount[page_url]}"
+      end
       site = context.registers[:site]
       converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
       content = converter.convert(super(context))
@@ -24,18 +26,20 @@ module Jekyll
 
   class SideNotes < Liquid::Block
     alias_method :render_block, :render
-    @@sidenotecount = 0;
+    @@sidenotecount = Hash.new(0)
 
     def initialize(tag_name, reference, tokens)
       super
       @reference = reference
-      @@sidenotecount += 1;
-      if @reference !~ /[^[:space:]]/
-        @reference = "sidenote-#{@@sidenotecount}";
-      end
     end
 
     def render(context)
+      # If reference is not manually set, use the automatic increment system
+      page_url = context.environments.first["page"]["url"]
+      @@sidenotecount[page_url] += 1
+      if @reference !~ /[^[:space:]]/
+        @reference = "sidenote-#{@@sidenotecount[page_url]}"
+      end
       site = context.registers[:site]
       converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
       content = converter.convert(super(context))
