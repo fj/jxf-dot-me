@@ -1,7 +1,0 @@
-{% capture workaround %}
-	{% assign sidenote-counter = sidenote-counter | plus: 1 %}
-	{% assign sidenote-string = 'sidenote-' | append:sidenote-counter %}
-{% endcapture %}{% assign workaround = nil %}
-<label for="{{ include.reference | default: sidenote-string }}" class="margin-toggle sidenote-number"></label>
-<input type="checkbox" id="{{ include.reference | default: sidenote-string }}" class="margin-toggle"/>
-<span class="sidenote">{{ include.content }}</span>
