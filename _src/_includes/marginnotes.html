@@ -1,7 +1,0 @@
-{% capture workaround %}
-	{% assign marginnote-counter = marginnote-counter | plus: 1 %}
-	{% assign marginnote-string = 'marginnote-' | append:marginnote-counter %}
-{% endcapture %}{% assign workaround = nil %}
-<label for="{{ include.reference | default: sidenote-string }}" class="margin-toggle">&#8853;</label>
-<input type="checkbox" id="{{ include.reference | default: sidenote-string }}" class="margin-toggle"/>
-<span class="marginnote">{{ include.content }}</span>
