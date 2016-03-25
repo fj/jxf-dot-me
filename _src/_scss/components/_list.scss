@@ -53,11 +53,15 @@
 }
 
 .list-item-solo-title {
-  border-bottom: 1px solid $off-white-dark;
+  margin-top: $margin*3;
+  margin-bottom: $margin*2;
 }
 
-.list-item-description {
+.list-item-solo-metadata {
   @extend .muted;
+  border-bottom: 1px solid $off-white-dark;
+  padding-bottom: $margin*3;
+  margin-bottom: $margin*3;
 }
 
 .list-item-description-content {
