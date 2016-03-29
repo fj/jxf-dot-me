@@ -4,7 +4,13 @@
 
 .markdown-content > :not(canvas):not(.full-width) {
   margin-left: 0;
-  width: 65%;
+  width: 70%;
+}
+
+@media (max-width: 60em) { 
+  .markdown-content > :not(canvas):not(.full-width) {
+    width: 100%;
+  }
 }
 
 .markdown-content p img {
@@ -28,3 +34,4 @@
     margin-bottom: 0.9775rem;
   }
 }
+
