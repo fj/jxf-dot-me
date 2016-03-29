@@ -18,8 +18,8 @@ label.margin-toggle:not(.sidenote-number) {
 .marginnote { 
   float: right;
   clear: right;
-  margin-right: -60%;
-  width: 50%;
+  margin-right: -50%;
+  width: 40%;
   margin-top: 0;
   margin-bottom: 0;
   font-family: $serif-font-family;
@@ -33,8 +33,7 @@ label.margin-toggle:not(.sidenote-number) {
   counter-increment: sidenote-counter; 
 }
 
-.sidenote-number:after,
-.sidenote:before { 
+.sidenote-number:after, .sidenote:before { 
   content: counter(sidenote-counter) " ";
   position: relative;
   vertical-align: baseline;
@@ -54,7 +53,15 @@ label.margin-toggle:not(.sidenote-number) {
   opacity: 0.75;
 }
 
-@media (max-width: 760px) { 
+@media (max-width: 76em) { 
+  .sidenote,
+  .marginnote { 
+    margin-right: -40%;
+    width: 30%;
+  }
+}
+
+@media (max-width: 60em) { 
   label.margin-toggle:not(.sidenote-number) { 
     display: inline; 
   }
