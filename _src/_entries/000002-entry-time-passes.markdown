@@ -23,13 +23,13 @@ Thanks to its continuous presence in all human lives, people have thought about 
 This excerpt, at first glance, sounds rather depressing and hopeless -- it suggests that we're inevitably and inextricably on a track towards doom. But on reading the full poem, we can see that it's actually an exhortation to make the most of the time we do have, no matter how long or short:
 
 > <div style="white-space: pre">Lives of great men all remind us
->   We can make our lives sublime,	 
-> And, departing, leave behind us	 
+>   We can make our lives sublime,   
+> And, departing, leave behind us  
 >   Footprints on the sands of time.</div>
 
 I started reflecting about some other events that have been "footprints in the sands of time", and like any developer, decided to write a little code to investigate things. Below are the approximate dates of some historical and predicted future events, and how far away we are from them.
 
-<aside>The dates given are approximations, of course; we don't know exact values for the first few events in the table.</aside>
+{% margin %}The dates given are approximations, of course; we don't know exact values for the first few events in the table.{% endmargin %}
 
 | event | &Delta; time (in <a id="set-countdown-seconds" href="#">sec</a> &middot; <a id="set-countdown-days" href="#">days</a> &middot; <a id="set-countdown-years" href="#">yr</a>) |
 | ----- | -----:|
@@ -46,14 +46,13 @@ I started reflecting about some other events that have been "footprints in the s
 | Halley's comet returns in 21<sup>st</sup> century | <span id="cd-halleys-comet">&middot;</span> |
 | world population reaches 10 billion | <span id="cd-10-billion-people">&middot;</span> |
 
-<aside>It turns out we have a hard time <a href="http://jbr.sagepub.com/content/13/5/437.short">estimating even shorter durations accurately</a>, like one hour. Success depends on factors like our mood, sleep, health, and attention span.</aside>
-
-The table is an interesting starting point for getting our bearings, but big stretches of time are tough to internalize for many people. We can usually recall what we were doing a day ago with some fidelity. We can give the general outline of what happened ten days ago, maybe by consulting our calendar.
+{% margin %}It turns out we have a hard time <a href="http://jbr.sagepub.com/content/13/5/437.short">estimating even shorter durations accurately</a>, like one hour. Success depends on factors like our mood, sleep, health, and attention span.{% endmargin %}
+The table is an interesting starting point for getting our bearings, but big stretches of time are tough to internalize for many people.
+We can usually recall what we were doing a day ago with some fidelity. We can give the general outline of what happened ten days ago, maybe by consulting our calendar.
 
 But it would be difficult to remember what was happening one hundred days ago. And going back one thousand days -- about 2.7 years -- is likely to exceed any normal person's capabilities. You can probably remember big ongoing events, like where you lived and your major relationships and friendships, but little else. These days are lost forever in the mists of time and memory.
 
-<aside>Drew Houston, the CEO of Dropbox, gave the 2013 MIT <a href="http://newsoffice.mit.edu/2013/commencement-address-houston-0607">commencement address</a>, where he describes coming to the realization that he's already 9,000 days down at age 24 and resolving to make his life different as a result.</aside>
-
+{% margin %}Drew Houston, the CEO of Dropbox, gave the 2013 MIT <a href="http://newsoffice.mit.edu/2013/commencement-address-houston-0607">commencement address</a>, where he describes coming to the realization that he's already 9,000 days down at age 24 and resolving to make his life different as a result.{% endmargin %}
 To put that in better perspective, citizens in the top one-third of countries by life expectancy can expect a mean lifespan of about <a href="http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy">eighty years</a>. That's about 30,000 days. By the time you hit your 27th birthday, you're down about 10,000 of those days -- and we can barely remember the overwhelming majority of them.
 
 In that milieu, what does 10,000 days mean against your total lifespan? It's hard to get the same perspective there that we have for a single day or a week. What if we ask a more direct question: how much time do we have left, and how can we visualize that?
@@ -110,13 +109,13 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
   }
 
   countdown.setLabels(
-	  ' ms| s| min| h| d| w| mo| y|',
+    ' ms| s| min| h| d| w| mo| y|',
     ' ms| s| min| h| d| w| mo| y|',
     ' <strong>&middot;</strong> ',
     ' <strong>&middot;</strong> ',
     null,
     function(n) { return n.toLocaleString() }
-	);
+  );
 
   function findDateForEvent(e) {
     return eventList[e];
