@@ -1,0 +1,19 @@
+{% if include.showcase.image %}
+  <!-- TODO: USE ASSET TAGS HERE -->
+  {% assign image_src = "" | append: include.showcase.image %}
+  <img src="{{ site.assets.root }}/images/{{ image_src }}" alt="project image for {{ g.title }}">
+{% else %}
+  <img src="http://placehold.it/1200x600">
+{% endif %}
+<h3 class="g-item-title">{{ include.showcase.client }}</h3>
+<div class="g-item-subtitle muted--2x"><span class="px1">{{ include.showcase.title }}</span> · <span class="px1">{{ include.showcase.date_range }}</span></div>
+<div class="g-item-description">
+  {{ include.showcase.content }}
+</div>
+<div class="portfolio-categories">
+  {% for tags in include.showcase.tags %}
+  <span class="portfolio-category">
+    <span class="caps">{{ tags }}</span>
+  </span>
+  {% endfor %}
+</div>
