@@ -45,7 +45,7 @@ label.margin-toggle:not(.sidenote-number) {
   content: counter(sidenote-counter);
   font-size: 1rem;
   top: -0.5rem;
-  left: -0.15rem; }
+}
 
 .sidenote:before { 
   content: counter(sidenote-counter) " ";
@@ -81,5 +81,12 @@ label.margin-toggle:not(.sidenote-number) {
   }
   label { 
     cursor: pointer; 
+  }
+  .margin-toggle {
+    border-bottom: thin #444 dotted;
+    color: #3498db;
+  }
+  .sidenote-number.sidenote-number {
+    border-bottom: none;
   }
 }

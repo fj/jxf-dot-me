@@ -242,7 +242,9 @@ While there is some capital for startups available, Charlottesville doesn't have
 
 ## Meetups
 
-Charlottesville has a relatively diverse technical community. Local or regional meetups are hosted for a number of major languages -- Ruby, Python, .NET, and so on. Charlottesville technologists seem to be polyglots more often than not, perhaps motivated by the diversity of the technical jobs in the area. A general software-technologist group focusing on software craftspersonship, [beCraft](https://groups.google.com/forum/#!forum/becraft), is well-attended. There are also less structured and more social meetups like First Wednesdays and [Charlottesville Women in Tech](http://www.charlottesvillewomenintech.com/).
+{% margin %}
+["Center for Innovative Technology fund is among region’s most active angel investors"](http://www.washingtonpost.com/business/capitalbusiness/center-for-innovative-technology-fund-is-among-regions-most-active-angel-investors/2014/04/25/6aa9be50-ca3c-11e3-a75e-463587891b57_story.html), Washington Post, April 27, 2014."
+{% endmargin %}Charlottesville has a relatively diverse technical community. Local or regional meetups are hosted for a number of major languages -- Ruby, Python, .NET, and so on. Charlottesville technologists seem to be polyglots more often than not, perhaps motivated by the diversity of the technical jobs in the area. A general software-technologist group focusing on software craftspersonship, [beCraft](https://groups.google.com/forum/#!forum/becraft), is well-attended. There are also less structured and more social meetups like First Wednesdays and [Charlottesville Women in Tech](http://www.charlottesvillewomenintech.com/).
 
 Charlottesville doesn't have a code school or a boot camp, but there are small group-learning classes in various contexts, like that offered by [Rails School](http://railsschool.org) or the frequent meetups hosted by the [Center for Open Science](http://centerforopenscience.org/). Our neighboring city, Richmond, is larger and offers many more options for meetups within a reasonable drive.
 
