@@ -1,0 +1,32 @@
+---
+layout: measure-lg
+---
+
+<div class="measure--lg">
+	{% if page.title %}
+		<h1 class="h2 txt--center">{{page.title}}</h1>
+	{% endif %}
+ 	{% if page.description %}
+		<h2 class="h4 txt--center py1">{{page.description}}</h2>
+  {% endif %}
+  
+  <!-- Could be possible to have front matter variable point to global site variable
+  for a more modular approach, but it has not been working for me -->
+  {% if page.title == "Portfolio" %}
+    {% assign project_groups = site.projects | sort: 'date_range' | by_group: 2 %}
+  {% elsif page.title == "Events" %}
+    {% assign project_groups = site.events | sort: 'date_range' | by_group: 2 %}
+  {% endif %}
+
+  <div class="g">
+    {% for gs in project_groups %}
+      <div class="g-r g-item-row">
+        {% for g in gs %}
+          <div class="g-r-c-6-12--lg g-r-c-6-12--md g-r-c-12--sm g-item-object">
+            {% include showcase-item.html showcase=g %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

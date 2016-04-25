@@ -46,9 +46,8 @@ Enter [Prolog](http://en.wikipedia.org/wiki/Prolog)! It's pretty rare that I eve
 
 # Prolog
 
-<aside>If you want to install Prolog yourself and follow along, follow the directions <a href="http://www.swi-prolog.org/build/">here</a>. You can load Prolog programs with <code class="shell">prolog -e x.pl</code>.</aside>
-
-Prolog belongs to a relatively rare breed of _logic programming languages_, in contrast to _imperative_ programming languages. Broadly, imperative languages require that your program take the form of a series of explicit instructions that describe what to do. For example, an imperative program to find the smallest element in a list might take a form like this:
+Prolog {% margin %}If you want to install Prolog yourself and follow along, follow the directions <a href="http://www.swi-prolog.org/build/">here</a>. You can load Prolog programs with <code class="shell">prolog -e x.pl</code>.{% endmargin %}
+belongs to a relatively rare breed of _logic programming languages_, in contrast to _imperative_ programming languages. Broadly, imperative languages require that your program take the form of a series of explicit instructions that describe what to do. For example, an imperative program to find the smallest element in a list might take a form like this:
 
 ```
 smallest(list):
@@ -69,9 +68,8 @@ smallest(list):
 
 This is an interesting inversion of responsibilities relative to imperative programs: instead of _telling a computer what to do_, we say _what the answer has to look like_. Then the computer is free to decide how to arrive at the answer.
 
-<aside><code>;</code> is disjunction in Prolog, similar to the <code>or</code> keyword elsewhere; <code>,</code> is conjunction, like <code>and</code>.</aside>
-
 All Prolog programs adopt this approach. We describe a series of true statements, then ask Prolog to evaluate a question to see if there is an answer that is consistent with everything we described. Those statements can take the form of either _facts_ or _rules_.
+{% margin %}<code>;</code> is disjunction in Prolog, similar to the <code>or</code> keyword elsewhere; <code>,</code> is conjunction, like <code>and</code>.{% endmargin %}
 
 * Facts are true statements in the universe of the program, like "grass is green", "Bob is a person", or "Alice is Bob's sister". In Prolog, we might express these as `green(grass)`, `person(bob)`, and `sibling(alice, bob)`, respectively.
 
