@@ -26,12 +26,12 @@ The environment file is expected to contain:
 
 ## Todo
 
-- [ ] Add sidenotes (SNs)
-- [ ] Add margin notes (MNs)
-- [ ] Add full width content
+- [X] Add sidenotes (SNs)
+- [X] Add margin notes (MNs)
+- [X] Add full width content
+- [X] Convert existing wide tables to full-width content
+- [X] Remove "main content is X% wide" CSS hacks in `_aside.scss` after MNs/SNs transition
+- [X] Use YYYY-MM-DD dates in shortlists on homepage; adjust spacing as needed
+- [X] Remove dangling left metadata column from lists and individual entries; move metadata below title
 - [ ] Convert existing RHS content to MNs / SNs
-- [ ] Convert existing wide tables to full-width content
-- [ ] Remove "main content is X% wide" CSS hacks in `_aside.scss` after MNs/SNs transition
-- [ ] Use YYYY-MM-DD dates in shortlists on homepage; adjust spacing as needed
-- [ ] Remove dangling left metadata column from lists and individual entries; move metadata below title
 - [ ] Full event list should use portfolio-page-like template instead of blog-list-like template

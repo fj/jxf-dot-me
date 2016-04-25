@@ -2,29 +2,24 @@
 layout: measure-lg
 ---
 
-<div class="measure--lg">
-  <div class="media-object">
-    <div class="media-object-figure mr1 txt--right">
-      <h3 class="list-item-title--compact">
-        {% include icon.html post_or_event=page %}
-      </h3>
-      <div class="muted--2x">
-        {% include long-date.html date=page.date %}<br>
-        {% include word-count.html content=page.content %}
-        <div class="post-categories">
-          {% for tag in page.tags %}
-            <div class="post-category">
-              <a href="/tag/{{tag}}" title="{{tag}}" class="dotted-link caps">{{tag}}</a>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    <div class="media-object-body">
-      <h3 class="list-item-title--compact list-item-solo-title">
+<div class="measure--lg blog_post">
+      <h1 class="list-item-title--compact list-item-solo-title title">
+      	{% include icon.html post_or_event=page %}
         {{page.title}}
-      </h3>
-      <div class="list-item-description">
+      </h1>
+      <div class="list-item-solo-metadata">
+        <div class="muted--2x">
+          {% include long-date.html date=page.date %} &mdash; {% include word-count.html content=page.content %}
+          <div class="post-categories">
+            {% for tag in page.tags %}
+              {% if forloop.last == false %}
+                <a href="/tag/{{tag}}" title="{{tag}}" class="dotted-link caps">{{tag}}</a><span>,&nbsp;</span>
+              {% else %}
+                <a href="/tag/{{tag}}" title="{{tag}}" class="dotted-link caps">{{tag}}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
       <article class="markdown-content">
         {{ content }}
@@ -53,6 +48,5 @@ layout: measure-lg
           {% include comments.html %}
         </div>
       {% endif %}
-    </div>
-  </div>
+
 </div>
