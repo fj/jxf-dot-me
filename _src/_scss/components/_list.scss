@@ -54,6 +54,11 @@
   }
 }
 
+/* Fix for home page icon misalignment */
+.home-list .jf-i {
+  top: 1.15em;
+}
+
 .list-item-title {
   margin: 0;
   padding: 1rem 0;
