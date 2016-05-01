@@ -52,6 +52,7 @@ collections:
     output: true
   projects:
     refname: project
+    output: true
     sort_by: date_range
 
 defaults:
@@ -67,6 +68,11 @@ defaults:
       layout: post
       comments: true
       subscribers: true
+  -
+    scope:
+      type: projects
+    values:
+      layout: post
   -
     scope:
       type: events
