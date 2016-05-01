@@ -10,6 +10,7 @@ module Jekyll
         assign_date_metadata_from_date_range collection
         assign_navigation_links collection
         assign_asset_paths name, collection
+        assign_default_item_type_from_refname collection
       end
     end
 
@@ -53,6 +54,12 @@ module Jekyll
       sorted_collection(collection).each_cons(2) do |d1, d2|
         d2.data['previous'] = navigation_hash_for_document d1
         d1.data['next']     = navigation_hash_for_document d2
+      end
+    end
+
+    def assign_default_item_type_from_refname(collection)
+      collection.docs.each do |d|
+        d.data['type'] ||= refname_for(collection)
       end
     end
 
