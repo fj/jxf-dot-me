@@ -9,7 +9,6 @@ layout: measure-lg
   </h1>
   <div class="list-item-solo-metadata">
     <div class="muted--2x">
-      {% include long-date.html date=page.date %} &mdash; {% include word-count.html content=page.content %}
       <div class="post-categories">
         {% for tag in page.tags %}
           {% if forloop.last == false %}

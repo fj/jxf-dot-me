@@ -35,3 +35,4 @@ The environment file is expected to contain:
 - [X] Remove dangling left metadata column from lists and individual entries; move metadata below title
 - [ ] Convert existing RHS content to MNs / SNs
 - [ ] Full event list should use portfolio-page-like template instead of blog-list-like template
+- [ ] Extract duplicated work between event/project layouts
