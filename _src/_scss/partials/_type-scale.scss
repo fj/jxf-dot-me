@@ -85,7 +85,7 @@ h6,
 
 article {
   h1, h2, h3, h4, h5, h6 { font-weight: bold; letter-spacing: 0.05rem; border-bottom: 1px solid $off-white-dark; }
-  
+
   h1 { font-size: 1.700rem; }
   h2 { font-size: 1.414rem; }
   h3 { font-size: 1.121rem; }
@@ -95,5 +95,9 @@ article {
 
 small,
 .small {
+  font-size: .88em;
+}
+
+.smaller {
   font-size: .75em;
 }
