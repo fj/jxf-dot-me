@@ -7,6 +7,7 @@ module Jekyll
       site.collections.each do |name, collection|
         Jekyll.logger.info "found metadata for collection #{name}: #{collection.metadata}"
         generate_permalinks name, collection
+        assign_date_metadata_from_date_range collection
         assign_navigation_links collection
         assign_asset_paths name, collection
       end
@@ -36,6 +37,16 @@ module Jekyll
     def collection_segments_for(document, refname)
       r = %r{^(.*?)-?#{refname}-(.*)$}
       r.match(document.basename_without_ext).to_a
+    end
+
+    def assign_date_metadata_from_date_range(collection)
+      r = refname_for(collection)
+      collection.docs.select { |d|
+        d.data.dig(r, 'date_range') && !d.data['date']
+      }.each { |d|
+        Jekyll.logger.info "writing date for #{d.basename_without_ext}: #{d.data.dig(r, 'date_range')}"
+        d.data['date'] = Date.parse(d.data.dig(r, 'date_range').to_s.split('⋯').first)
+      }
     end
 
     def assign_navigation_links(collection)
