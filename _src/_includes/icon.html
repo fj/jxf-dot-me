@@ -19,6 +19,8 @@
     {% assign icon_class = 'video' %}
   {% when 'snippet', 'hackathon', 'experiment' %}
     {% assign icon_class = 'code' %}
+  {% when 'project' %}
+    {% assign icon_class = 'wrench' %}
   {% when 'review' %}
     {% assign icon_class = 'thumbs-o-up' %}
   {% else %}
