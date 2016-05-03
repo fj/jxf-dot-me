@@ -1,0 +1,43 @@
+<div class="g-item-subtitle px0 small">
+  <ul>
+    {% if include.event.description %}
+      <li>
+        <strong>what:</strong>
+        {{ include.event.description }}
+      </li>
+    {% endif %}
+
+    {% if include.event.location %}
+      <li>
+        <strong>where:</strong>
+        {% if include.event.location_poi_url %}
+          <a rel="nofollow" href="{{ include.event.location_poi_url }}">{{ include.event.location }}</a>
+        {% else %}
+          {{ include.event.location }}
+        {% endif %}
+
+        {% if include.event.location_geo_url %}
+          (<a rel="nofollow" href="{{ include.event.location_geo_url }}">{{ include.event.location_geo }}</a>)
+        {% endif %}
+      </li>
+    {% endif %}
+
+    {% if include.event.date_range %}
+      <li>
+        <strong>when:</strong>
+        {{ include.event.date_range }}
+      </li>
+    {% endif %}
+
+    {% if include.event.host %}
+      <li>
+        <strong>who:</strong>
+        {% if include.event.host_url %}
+          <a rel="nofollow" href="{{ include.event.host_url }}">{{ include.event.host }}</a>
+        {% else %}
+          {{ include.event.host }}
+        {% endif %}
+      </li>
+    {% endif %}
+  </ul>
+</div>
