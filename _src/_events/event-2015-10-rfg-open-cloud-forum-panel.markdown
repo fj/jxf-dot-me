@@ -1,7 +1,20 @@
 ---
-type:        conference
-title:       "CTO Panel: The Future of Cloud Platforms"
-date:        2015-10-22
+type:        panel
+event:
+  date_range: 2015-10-22
+  location: Le Bernardin Prive
+  location_poi_url: http://www.le-bernardinprive.com/
+  location_geo: New York, NY, US
+  location_geo_url: https://goo.gl/maps/x7p9iFqGzkw
+  name: CTO Panel
+  topic: The Future of Cloud Platforms
+  host: Robert Frances Group
+tags:
+  - cloud
+  - devops
+  - enterprise
+  - platforms
+  - finance
 description: >
   Speaking at the Robert Frances Group to the financial services user community.
 ---

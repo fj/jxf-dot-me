@@ -1,12 +1,23 @@
 ---
 type:        lecture
-title:       "Pivotal: \"Consensus in Cloud Foundry\""
-date:        2015-10-21
+event:
+  date_range: 2015-10-21
+  location: Pivotal
+  location_geo: New York, NY, US
+  location_geo_url: https://goo.gl/maps/hrePNL8rTf72
+  name: Pivotal Tech Talks
+  topic: Distributed Consensus in Cloud Foundry
+  host: Pivotal
+  host_url: http://pivotal.io/
+tags:
+  - consensus
+  - distributed computing
+  - cloud foundry
 description: >
-  Presenting **A Matter of Time**, a 30-minute talk.
+  Presenting **Consensus in Cloud Foundry**, a 30-minute talk.
 ---
 
-I'm presenting **Consensus in Cloud Foundry** at [Pivotal](http://pivotal.io/) on October 21st, 2015 in New York City, NY. It will be a 60-minute talk followed by Q&A.
+I'm presenting **Consensus in Cloud Foundry** at [Pivotal](http://pivotal.io/) on October 20th, 2015 in New York City, NY. It will be a 60-minute talk followed by Q&A.
 
 ### Abstract
 

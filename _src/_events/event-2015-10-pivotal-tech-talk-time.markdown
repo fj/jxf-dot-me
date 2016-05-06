@@ -1,12 +1,24 @@
 ---
 type:        lecture
-title:       "Pivotal Labs Tech Talk: \"A Matter of Time\""
-date:        2015-10-20
+event:
+  date_range: 2015-10-20
+  location: Pivotal
+  location_geo: New York, NY, US
+  location_geo_url: https://goo.gl/maps/hrePNL8rTf72
+  name: Pivotal Tech Talks
+  topic: A Matter of Time
+  host: Pivotal
+  host_url: http://pivotal.io/
+tags:
+  - time
+  - engineering
+  - software
+  - humans
 description: >
   Presenting **A Matter of Time**, a 30-minute talk.
 ---
 
-I'm presenting **A Matter of Time** at [Pivotal Labs](http://pivotal.io/) on October 20th, 2015 in New York City, NY. It will be a 30-minute talk followed by Q&A.
+I'm presenting **A Matter of Time** at [Pivotal Labs](http://pivotal.io/) in New York City, NY. It will be a 30-minute talk followed by Q&A.
 
 ### Abstract
 
