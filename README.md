@@ -33,14 +33,14 @@ Events take the following metadata:
 ```yaml
 event:
   date_range: 2015-10-22⋯30
-  location: XYZ Hotel
-  location_poi_url: http://example.com/
-  location_geo: Fakecity, NY, US
-  location_geo_url: http://example.com/
   name: O'Reilly Markup Convention 2015
   topic: YAML Considered Harmful
   host: O'Reilly
   host_url: http://markupconvention.example.com
+  location: XYZ Hotel
+  location_poi_url: http://example.com/
+  location_geo: Fakecity, NY, US
+  location_geo_url: http://example.com/
 ```
 
 ## Todo
