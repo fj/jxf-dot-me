@@ -54,10 +54,6 @@
   }
 }
 
-/* Fix for home page icon misalignment */
-.home-list .jf-i {
-  top: 1.15em;
-}
 
 .list-item-title {
   margin: 0;
@@ -106,5 +102,27 @@
   }
   .event_post .jf-i {
     display: none;
+  }
+}
+
+/* Home page specific list styles below */
+.home-list .jf-i {
+  top: 1.15rem;
+}
+
+@media (max-width: 55em) {
+  .home-list.home-list {   //Double specificity trick
+    flex-basis: 100%;
+    max-width: 100%;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+
+  .home-list .list-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .home-list:nth-child(2) .list-meta-title {
+    margin-top: 1rem;
   }
 }
