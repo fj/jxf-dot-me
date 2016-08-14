@@ -28,6 +28,7 @@
 .g-item-subtitle {
   @extend .h5;
 
+  font-family: $sans-font-family;
   padding-top: 0;
   margin-top: 0;
   margin-bottom: .75rem;
