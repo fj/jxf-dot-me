@@ -13,6 +13,10 @@ html {
   font-family: $sans-font-family;
 }
 
+.serif {
+  font-family: $serif-font-family;
+}
+
 pre,
 code,
 .monospace {
@@ -30,7 +34,6 @@ h4,
 h5,
 .h5,
 h6,
-.h6,
-.serif {
+.h6 {
   font-family: $serif-font-family;
 }
