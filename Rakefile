@@ -111,8 +111,8 @@ class AssetDeployer
 
     def deploy_files(local, remote)
       execute_command "mkdir -p #{local}"
-      issue_s3_command "sync -H -M --no-mime-magic --verbose #{local} #{remote}"
-      issue_s3_command "sync -H -M --no-mime-magic --verbose --delete-removed #{remote} #{local}"
+      issue_s3_command "sync -H -M --recursive --no-mime-magic --verbose #{local} #{remote}"
+      issue_s3_command "sync -H -M --recursive --no-mime-magic --verbose --delete-removed #{remote} #{local}"
     end
   end
 end
