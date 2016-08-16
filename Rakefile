@@ -169,7 +169,7 @@ namespace :assets do
 end
 
 desc "build assets"
-task :assets => ['assets:css:compile', 'assets:synchronize_remote']
+task :assets => ['assets:css:compile']
 
 desc "build site"
 task :build => [:assets] do
@@ -210,4 +210,4 @@ task :deploy => [:build, :cname] do
   logger.info log_message "deployment finished"
 end
 
-task :default => ['assets:css:lint', 'assets:css:compile']
+task :default => ['assets:css:compile']
