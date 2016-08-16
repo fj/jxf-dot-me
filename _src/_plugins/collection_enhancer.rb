@@ -5,7 +5,6 @@ module Jekyll
 
     def generate(site)
       site.collections.each do |name, collection|
-        Jekyll.logger.info "found metadata for collection #{name}: #{collection.metadata}"
         generate_permalinks name, collection
         assign_date_metadata_from_resource_date_range collection
         assign_title_metadata_from_resource_topic collection
@@ -22,11 +21,9 @@ module Jekyll
         raise ArgumentError, "couldn't find a title" unless doc_title
 
         constructed_slug = doc_title
-        Jekyll.logger.info "writing slug for #{refname}: #{constructed_slug}"
         d.data['permalink'] = "/#{collection_name}/#{constructed_slug}/"
 
         if !doc_id.empty?
-          Jekyll.logger.info "writing document id for #{d.basename_without_ext}: #{collection_name}-#{doc_id}"
           d.data['doc_id'] = "#{collection_name}-#{doc_id}"
         end
       end
@@ -46,7 +43,6 @@ module Jekyll
       collection.docs.select { |d|
         d.data.dig(r, 'date_range') && !d.data['date']
       }.each { |d|
-        Jekyll.logger.info "writing date for #{d.basename_without_ext}: #{d.data.dig(r, 'date_range')}"
         d.data['date'] = Date.parse(d.data.dig(r, 'date_range').to_s.split('⋯').first)
       }
     end
@@ -78,7 +74,6 @@ module Jekyll
         _, doc_id, doc_title = collection_segments_for(d, refname_for(collection))
         d.data['asset_path'] = "//s3.amazonaws.com/assets.jxf.me"
         d.data['image_asset_path'] = "#{d.data['asset_path']}/images/#{collection_name}/#{doc_id}"
-        Jekyll.logger.info "adding image path for #{d.path}: #{d.data['image_asset_path']}"
       end
     end
 
@@ -89,10 +84,8 @@ module Jekyll
 
     def collection_sorted_by_field(collection, field)
       if collection.docs.all? { |d| !!d.data[field] }
-        Jekyll.logger.info "sorting by data field: #{field}"
         collection.docs.sort_by { |d| d.data.fetch(field) }
       else
-        Jekyll.logger.info "sorting by object field: #{field}"
         collection.docs.sort_by(&:"#{field}")
       end
     end
