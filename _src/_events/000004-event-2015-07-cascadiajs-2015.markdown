@@ -1,7 +1,17 @@
 ---
 type:        conference
 title:       "CascadiaJS: \"A Matter of Time\""
-date:        2015-07-10
+event:
+  date_range: 2015-07-10
+  description: a talk  why time, as represented in software, seems easy but is actually hard
+  name: A Matter of Time
+  topic:
+  host:
+  host_url:
+  location:
+  location_poi_url:
+  location_geo:
+  location_geo_url:
 description: >
   Presenting **A Matter of Time**, a 40-minute talk.
 ---

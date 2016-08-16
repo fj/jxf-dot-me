@@ -2,8 +2,13 @@
 type:        hackathon
 title:       "Hack.UVA"
 date:        2015-02-28
-description: >
-  UVA's second annual hackathon.
+event:
+  date_range: 2016-02-28
+  description: an annual hackathon hosted by UVA
+  host: UVA ACM
+  location: University of Virginia, Newcomb Hall
+  location_poi_url: https://www.virginia.edu
+  location_geo: Charlottesville, VA, US
 ---
 
 I'll be judging the [Hack.UVA](http://hackuva.io/) hackathon. It's a two-day event taking place on February 28th and open to all current [University of Virginia](http://www.virginia.edu) students. If you're a student, you can register [here](http://goo.gl/IwhBJU)!

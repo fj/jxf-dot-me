@@ -1,9 +1,14 @@
 ---
 type:        conference
 title:       "GeeCON 2015: \"A Matter of Time\""
-date:        2015-05-16
-description: >
-  Presenting **A Matter of Time**, a 40-minute talk.
+event:
+  date_range: 2015-05-13⋯2015-05-15
+  description: a conference focusing on the Java ecosystem and the JVM
+  host: GeeCON
+  host_url: http://2015.geecon.org/
+  location: Multikino Kraków
+  location_geo: 128 Dobrego Pasterza, Kraków, Poland
+  location_geo_url: https://goo.gl/I5S1DH
 ---
 
 I'm presenting **A Matter of Time** at [GeeCON 2015](http://2015.geecon.org/) in Krakow, Poland. It will be a 40-minute talk including a brief time for Q&A.

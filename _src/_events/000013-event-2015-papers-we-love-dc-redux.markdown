@@ -1,9 +1,21 @@
 ---
 type:        lecture
 title:       "Redux: Papers We Love DC: Coresets"
-date:        2015-04-30
-description: >
-  Discussing Dan Feldman's Ph.D. thesis, "Coresets and their applications".
+event:
+  date_range: 2015-04-30
+  description: a meetup discussing academic papers of relevance to technology practitioners
+  host: Papers We Love DC/NoVA
+  host_url: http://www.meetup.com/Papers-We-Love-DC/events/220155410/
+  location: WeWork DC Dupont Circle
+  location_poi_url: https://www.wework.com/locations/washington-d-c/dupont-circle
+  location_geo: 1875 Connecticut Avenue, Washington, DC
+  location_geo_url: https://goo.gl/maps/L44V5X38bFt
+happening:
+  -
+    name: Coresets
+    type: talk
+    duration: 60 minutes
+    description: how to turn big data sets into well-approximating tiny data sets
 ---
 
 My previous talk at the [Papers We Love DC](http://www.meetup.com/Papers-We-Love-DC/events/220155410/) meetup was canceled due to a heavy snowstorm that hit the DC area. Michael Bernstein has graciously rescheduled [the new meetup](http://www.meetup.com/Papers-We-Love-DC/events/221811112/) for April 30th.
