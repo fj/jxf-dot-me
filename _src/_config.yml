@@ -50,6 +50,7 @@ collections:
   events:
     refname: event
     output: true
+    logos: true
   projects:
     refname: project
     output: true
