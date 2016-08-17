@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module Jekyll
   class CollectionEnhancer < Generator
     safe true
@@ -10,6 +12,7 @@ module Jekyll
         assign_title_metadata_from_resource_topic collection
         assign_navigation_links collection
         assign_asset_paths name, collection
+        assign_logo_paths name, collection
         assign_default_item_type_from_refname collection
       end
     end
@@ -43,7 +46,9 @@ module Jekyll
       collection.docs.select { |d|
         d.data.dig(r, 'date_range') && !d.data['date']
       }.each { |d|
-        d.data['date'] = Date.parse(d.data.dig(r, 'date_range').to_s.split('⋯').first)
+        parsed_date = Date.parse(d.data.dig(r, 'date_range').to_s.split('⋯').first)
+        d.data['date'] = parsed_date
+        Jekyll.logger.warn("doc ... parsed date: #{parsed_date}")
       }
     end
 
@@ -74,6 +79,21 @@ module Jekyll
         _, doc_id, doc_title = collection_segments_for(d, refname_for(collection))
         d.data['asset_path'] = "//s3.amazonaws.com/assets.jxf.me"
         d.data['image_asset_path'] = "#{d.data['asset_path']}/images/#{collection_name}/#{doc_id}"
+      end
+    end
+
+    def assign_logo_paths(collection_name, collection)
+      has_logos = collection.metadata['logos']
+      return unless has_logos
+
+      collection.docs.each do |d|
+        _, doc_id, _ = collection_segments_for(d, refname_for(collection))
+        logo_asset_subpath = "#{doc_id}-#{refname_for(collection)}-logo.png"
+        logo_asset_uri = "#{d.data.fetch 'image_asset_path'}/#{logo_asset_subpath}"
+
+        canonical_asset_uri = logo_asset_uri.start_with?('//') ? "https:#{logo_asset_uri}" : logo_asset_uri
+
+        d.data['logo_asset_uri'] = logo_asset_uri
       end
     end
 
