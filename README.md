@@ -32,15 +32,37 @@ Events take the following metadata:
 
 ```yaml
 event:
+  description: a conference covering the popular markup language, Markdown
   date_range: 2015-10-22⋯30
-  name: O'Reilly Markup Convention 2015
-  topic: YAML Considered Harmful
   host: O'Reilly
   host_url: http://markupconvention.example.com
   location: XYZ Hotel
   location_poi_url: http://example.com/
   location_geo: Fakecity, NY, US
   location_geo_url: http://example.com/
+```
+
+The metadata template is here:
+
+```yaml
+event:
+  date_range:
+  description:
+  host:
+  host_url:
+  location:
+  location_poi_url:
+  location_geo:
+  location_geo_url:
+```
+
+### Talks
+
+```yaml
+talk:
+  name: O'Reilly Markup Convention 2015
+  topic: YAML Considered Harmful
+  description: a talk on why YAML isn't as great as you think it is
 ```
 
 ## Todo
@@ -55,4 +77,6 @@ event:
 - [ ] Convert existing RHS content to MNs / SNs
 - [ ] Full event list should use portfolio-page-like template instead of blog-list-like template
 - [ ] Extract duplicated work between event/project layouts
+- [ ] Use asset path conditionally instead of always pointing to S3 assets
+- [ ] Pass `scss-lint`
 - [ ] Use `talk: ...` metadata blocks (in data files? directly in frontmatter?) to generate talk details on showcase-items
