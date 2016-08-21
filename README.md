@@ -55,3 +55,4 @@ event:
 - [ ] Convert existing RHS content to MNs / SNs
 - [ ] Full event list should use portfolio-page-like template instead of blog-list-like template
 - [ ] Extract duplicated work between event/project layouts
+- [ ] Use `talk: ...` metadata blocks (in data files? directly in frontmatter?) to generate talk details on showcase-items
