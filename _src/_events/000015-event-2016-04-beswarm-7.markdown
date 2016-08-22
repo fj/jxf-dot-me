@@ -3,12 +3,11 @@ type:        conference
 title:       beSwarm 7
 event:
   date_range: 2016-04-02
+  host: the Charlottesville technology community
   location: Center for Open Science
   location_poi_url: https://cos.io/
   location_geo: Charlottesville, VA, US
-  host: Charlottesville technology community
-description: >
-  Charlottesville's 7th annual technology unconference.
+  description: Charlottesville's 7th annual technology unconference
 ---
 
 [**beSwarm**](http://www.meetup.com/cville-tech/events/229274375/) is an annual event for the central Virginia technology community. It's run in the ["unconference"](http://en.wikipedia.org/wiki/Unconference) format -- meaning that there are no speakers decided in advance, no prepared slide decks, and especially no vendors making obnoxious pitches.

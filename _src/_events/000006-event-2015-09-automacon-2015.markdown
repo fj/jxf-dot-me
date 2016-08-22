@@ -1,6 +1,6 @@
 ---
 type:        conference
-title:       "Automacon: \"Continuous Everything\""
+title:       "Automacon 2015: \"Continuous Everything\""
 date:        2015-09-15
 description: >
   Presenting **Continuous Everything**, a 20-minute talk.
