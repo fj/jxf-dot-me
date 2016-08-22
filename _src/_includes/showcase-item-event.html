@@ -1,7 +1,7 @@
-{% if include.showcase.image %}
+{% if include.showcase.logo_asset_uri %}
   <!-- TODO: USE ASSET TAGS HERE -->
-  {% assign image_src = "" | append: include.showcase.image %}
-  <img src="{{ site.assets.root }}/images/{{ image_src }}" alt="image for {{ include.showcase.title }}">
+  {% assign image_src = "" | append: include.showcase.logo_asset_uri %}
+  <img src="{{ image_src }}" alt="image for {{ include.showcase.title }}">
 {% else %}
   <img src="http://placehold.it/1200x600">
 {% endif %}
