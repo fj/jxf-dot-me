@@ -56,7 +56,7 @@
 
 /* Fix for home page icon misalignment */
 .home-list .jf-i {
-  top: 1.15em;
+  top: .7em;
 }
 
 .list-item-title {
@@ -94,13 +94,13 @@
 }
 
 /* Hide icon next to title on smaller screens to optimize text space */
-@media (max-width: 70em) { 
+@media (max-width: 70em) {
   .blog_post_list .jf-i {
     display: none;
   }
 }
 
-@media (max-width: 72em) { 
+@media (max-width: 72em) {
   .blog_post .jf-i {
     display: none;
   }
