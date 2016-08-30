@@ -1,6 +1,6 @@
 ---
 type:         snippet
-title:        "Finding Out What Changed During Debian/Ubuntu Package Upgrades"
+title:        "Finding out what changed during Debian/Ubuntu package upgrades"
 date:         2015-05-22T08:00:00Z
 published:    true
 tags:

@@ -1,6 +1,6 @@
 ---
 type:         experiment
-title:        "Time Passes"
+title:        "Time passes"
 date:         2015-04-05T07:00:00Z
 published:    true
 tags:
@@ -102,7 +102,7 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
     "cd-halleys-comet": "2061-07-28",
     "cd-10-billion-people": "2063-06-17"
   };
-  
+
   function setCountdownDefaultUnits(u) {
     countdown.DEFAULTS = u;
     refreshTimers();
@@ -120,20 +120,20 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
   function findDateForEvent(e) {
     return eventList[e];
   }
-  
+
   function countdownSuffix(c) {
     return (c.start < c.end) ? 'ago' : 'to go';
   }
 
   function countdownForEvent(e, u) {
     var units = u || countdown.DAYS;
-    
+
     var c = countdown(
       new Date(e),
       null,
       units
     );
-    
+
     return c;
   }
 
@@ -141,10 +141,10 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
     var s = "";
     d = findDateForEvent(e);
     c = countdownForEvent(d, countdown.DEFAULTS);
-    
+
     s += c;
     s += ' ' + countdownSuffix(c);
-    
+
     document.getElementById(e).innerHTML = s;
   }
 
@@ -162,13 +162,13 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
     refreshTimers();
     e.preventDefault();
   });
-  
+
   document.getElementById('set-countdown-days').addEventListener('click', function(e) {
     setCountdownDefaultUnits(countdown.DAYS);
     refreshTimers();
     e.preventDefault();
   });
-  
+
   document.getElementById('set-countdown-years').addEventListener('click', function(e) {
     setCountdownDefaultUnits(countdown.YEARS | countdown.WEEKS);
     refreshTimers();
@@ -183,14 +183,14 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
   var getField = function(id) {
     return document.getElementById(id);
   }
-  
+
   var refreshCanvas = function() {
     var timer = inputConverter.getCountdownToDate(inputConverter.getBirthdateFromField());
     var normalizedWeeks = (timer.start < timer.end) ? (timer.years * 52 + timer.weeks) : 0;
-    
+
     // render text
     textRenderer.render();
-    
+
     // draw
     if (inputConverter.validate()) {
       console.log('weeks: ' + normalizedWeeks)
@@ -209,49 +209,49 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
     validate: function() {
       return (this.getBirthdateFromField().isValid() && parseInt(this.getLifespanFromField()) > 0);
     },
-    
+
     getMomentFromField: function(id) {
       return moment.utc(getField(id).value, 'YYYY-MM-DD', true);
     },
-    
+
     getBirthdateFromField: function() {
       return this.getMomentFromField('user-birthday');
     },
-    
+
     getLifespanFromField: function() {
       return getField('user-lifespan').value;
     },
-    
+
     getDifferenceInUnits: function(u) {
       return parseInt(moment().diff(this.getBirthdateFromField(), u));
     },
-    
+
     getDeathdate: function() {
       return moment(this.getBirthdateFromField()).add(this.getLifespanFromField(), 'years');
     },
-    
+
     getCountdownToDate: function(d1) {
       return countdownForEvent(new Date(d1), countdown.YEARS | countdown.WEEKS);
     },
   };
-  
+
   var textRenderer = {
     render: function() {
       var birthdate = inputConverter.getBirthdateFromField();
       var lifespan  = inputConverter.getLifespanFromField();
       var deathdate = inputConverter.getDeathdate();
-      
+
       var fmt = function(m) {
         return m.isValid() ? m.format('YYYY-MM-DD') : '{invalid date}';
       }
-      
+
       var s = "";
       if (!birthdate.isValid()) {
         s += "Enter a valid birthdate (YYYY-MM-DD).<br>";
         getField('time-result').innerHTML = s;
         return;
       }
-      
+
       if (birthdate < moment.utc()) {
         s += "You were born on <strong>" + fmt(birthdate) + "</strong>.<br>";
       } else {
@@ -259,7 +259,7 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
         getField('time-result').innerHTML = s;
         return;
       }
-      
+
       if (deathdate > moment.utc()) {
         s += "If you live for <strong>" + lifespan + "</strong> years, you will die on <strong>" + fmt(deathdate) + "</strong>.<br>";
       } else {
@@ -267,7 +267,7 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
         getField('time-result').innerHTML = s;
         return;
       }
-      
+
       var timer = inputConverter.getCountdownToDate(fmt(deathdate))
       s += "You have <strong>" + timer.toString() + "</strong> remaining."
       getField('time-result').innerHTML = s;
@@ -277,7 +277,7 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
   // canvas drawing
   var canvasDrawer = {
     transitionIndex: 0,
-    
+
     gridRows: 80,
     gridCols: 52,
     boxSize: {x: 5, y: 3},
@@ -287,23 +287,23 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
     minorSpacingFrequency: {x: 1, y: 1},
     majorSpacingFrequency: {x: 1, y: 5},
     ySeparatorFrequency: 10,
-    
+
     stroke: "rgb(120, 120, 120)",
-    
-    animateFrame: window.requestAnimationFrame || 
-      window.mozRequestAnimationFrame || 
-      window.webkitRequestAnimationFrame || 
+
+    animateFrame: window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
       window.msRequestAnimationFrame,
-      
-    cancelAnimateFrame: window.cancelAnimationFrame || 
-                window.mozCancelAnimationFrame || 
-                window.webkitCancelAnimationFrame || 
+
+    cancelAnimateFrame: window.cancelAnimationFrame ||
+                window.mozCancelAnimationFrame ||
+                window.webkitCancelAnimationFrame ||
                 window.msCancelAnimationFrame,
-      
+
     circleAngle: 0,
-    
+
     animating: false,
-    
+
     render: function() {
       if (this.animating) {
         console.log('canceling animation ' + this.animating);
@@ -314,57 +314,57 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
       context.canvas.height = this.getCanvasHeight();
       this.draw();
     },
-    
+
     draw: function() {
       var context = this.getCanvasElement().getContext('2d');
-      
+
       this.clearCanvas(context);
       this.drawGrid(context);
       this.drawAnimatedCircleWithAngle(context, this.circleAngle);
       this.circleAngle += 1;
-      
+
       this.animating = this.animateFrame.call(window, this.draw.bind(this));
     },
-    
+
     getCanvasHeight: function() {
       var spacing = this.calculateBaseSpacing(this.gridCols, this.gridRows);
       return spacing.y + this.canvasPaddingSpacing.y;
     },
-    
+
     getCanvasElement: function() {
       return getField('time-result-visualization');
     },
-    
+
     countMajorSpacing: function(x_i, y_i) {
       return {
         x: Math.floor(x_i / this.majorSpacingFrequency.x),
         y: Math.floor(y_i / this.majorSpacingFrequency.y),
       };
     },
-    
+
     countMinorSpacing: function(x_i, y_i) {
       return {
         x: Math.floor(x_i / this.minorSpacingFrequency.x),
         y: Math.floor(y_i / this.minorSpacingFrequency.y),
       };
     },
-    
+
     spacingSize: function(x_i, y_i) {
       var minorSpaces = this.countMinorSpacing(x_i, y_i);
       var majorSpaces = this.countMajorSpacing(x_i, y_i);
-      
+
       var xSpacing = this.minorSpacing.x * minorSpaces.x + this.majorSpacing.x * majorSpaces.x;
       var ySpacing = this.minorSpacing.y * minorSpaces.y + this.majorSpacing.y * majorSpaces.y;
-      
+
       return {
         x: xSpacing,
         y: ySpacing
       };
     },
-    
+
     fill: function(index, limit) {
       var sign = (index && index !== limit) ? index < limit ? -1 : 1 : 0;
-      
+
       switch (sign) {
         case -1:
           return "rgba(150, 0, 0, 0.2)";
@@ -376,63 +376,63 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
           return undefined;
       }
     },
-    
+
     clearCanvas: function(context) {
       var h = context.canvas.height;
       var w = context.canvas.width;
-      
+
       context.setLineDash([]);
       context.lineWidth = 1;
       context.clearRect(0, 0, w, h);
     },
-    
+
     drawPath: function(path) {
       return path();
     },
-    
+
     horizontalLinePath: function(context, stroke, lineY) {
       context.beginPath();
-      
+
       context.moveTo(0, lineY);
       context.lineTo(context.canvas.width, lineY);
       context.setLineDash([4,4]);
       context.stroke();
-      
+
       return context;
     },
-    
+
     rightTextLabelPath: function(context, fill, textY, text) {
       context.beginPath();
-      
+
       context.font = "16px 'PTSans'";
       context.textAlign = 'right';
       context.textBaseline = 'bottom';
       context.fillStyle = fill;
       var padding = 10;
-      
+
       var px = context.canvas.width - padding;
       var py = textY;
 
       context.fillText(text + " years", px, py);
-      
+
       return context;
     },
-    
+
     squarePath: function(context, stroke, fill, rect) {
       context.beginPath();
-      
+
       context.rect.apply(context, rect);
       context.strokeStyle = stroke;
       context.fillStyle = fill;
       //context.stroke();
       context.fill();
-      
+
       return context;
     },
-    
+
     calculateSquare: function(x_i, y_i) {
       var spacing = this.calculateBaseSpacing(x_i, y_i);
-      
+
       return [
         spacing.x,
         spacing.y,
@@ -440,73 +440,73 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
         this.boxSize.y
       ];
     },
-    
+
     calculateCenterBoxSpacing: function(x_i, y_i) {
       var spacing = this.calculateBaseSpacing(x_i, y_i);
-      
+
       return {
         x: spacing.x + (this.boxSize.x / 2),
         y: spacing.y + (this.boxSize.y / 2),
       };
     },
-    
+
     calculateTransitionBoxPosition: function(transitionIndex) {
       var y_i = Math.floor(transitionIndex / this.gridCols);
       var x_i = transitionIndex - y_i * this.gridCols - 1;
-      
+
       return this.calculateCenterBoxSpacing(x_i, y_i);
     },
-    
+
     calculateLineSpacing: function(x_i, y_i) {
       var spacing = this.calculateBaseSpacing(x_i, y_i);
       var previousSpacing = this.calculateBaseSpacing(x_i, y_i - 1);
       var yMidpoint = ((previousSpacing.y + this.boxSize.y) + (spacing.y)) / 2
-      
+
       return {
         x: spacing.x,
         y: yMidpoint,
       };
     },
-    
+
     calculateBaseSpacing: function(x_i, y_i) {
       var spacingSize = this.spacingSize(x_i, y_i);
-      
+
       var xSpacing =
-        this.canvasPaddingSpacing.x + 
+        this.canvasPaddingSpacing.x +
         spacingSize.x +
         this.boxSize.x * x_i
-      
+
       var ySpacing =
-        this.canvasPaddingSpacing.y + 
+        this.canvasPaddingSpacing.y +
         spacingSize.y +
         this.boxSize.y * y_i
-      
+
       return {
         x: xSpacing,
         y: ySpacing,
       };
     },
-    
+
     drawGrid: function(context) {
       /// Draw a grid of squares on the context, taking into account the spacing parameters previously specified.
       /// Also draw a line and some text labels at frequencies determined by the ySeparatorFrequency.
-      
+
       for (var y = 0; y < this.gridRows; y++) {
         for (var x = 0; x < this.gridCols; x++) {
           var fill   = this.fill(y * this.gridCols + x + 1, this.transitionIndex)
-          
+
           var sPath = this.squarePath.bind(null, context, this.stroke, fill, this.calculateSquare(x, y));
           this.drawPath(sPath);
         }
-        
+
         // Make sure we draw an extra line if that would equal the last row.
         if (y > 0 && (y + 1) % this.ySeparatorFrequency === 0) {
           var forY    = y + 1;
           var spacing = this.calculateLineSpacing(x, forY);
-          
+
           var lPath = this.horizontalLinePath.bind(null, context, this.stroke, spacing.y);
           this.drawPath(lPath);
-          
+
           var textPath = this.rightTextLabelPath.bind(null, context, "rgba(150, 150, 150, 1)", spacing.y, forY.toString());
           this.drawPath(textPath);
         }
@@ -516,14 +516,14 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
     drawAnimatedCircleWithAngle: function(context, angle) {
       /// Draw a circle on the context.
       /// Use `angle` to vary the size of the circle, by making the radius depend on the angle.
-      
+
       var arcSegments = 128.0;
       var arcFraction = ((angle % arcSegments) / arcSegments) * 2 * Math.PI;
-      
+
       var radius = Math.max(this.boxSize.x, this.boxSize.y) + 2 * Math.abs(Math.cos(arcFraction));
       var p = this.calculateTransitionBoxPosition(this.transitionIndex);
-      
-      
+
+
       // Draw a dot on the center.
       context.beginPath();
       context.arc(p.x, p.y, radius, 0, Math.PI * 2);
@@ -532,6 +532,6 @@ And yet, this doesn't need to be a discouraging idea. Longfellow had something t
       context.fill();
     }
   };
-  
+
   refreshCanvas();
 </script>

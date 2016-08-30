@@ -1,6 +1,6 @@
 ---
 type:         post
-title:        "Fully-Featured Custom Collections in Jekyll"
+title:        "Fully-featured custom collections in Jekyll"
 date:         2015-04-10T07:00:00Z
 published:    true
 tags:
@@ -89,7 +89,7 @@ Anything that's not in the `_posts` collection doesn't get `next` or `previous` 
 
 # Custom collections to the rescue
 
-What do you do if the thing you want to add is neither a page nor a post? You can add _custom collections_ -- Jekyll's term for a set of things of the same kind, like "blog entries", "soccer matches", or "team members". While Jekyll's documentation is usually very good, it doesn't cover how to do this in a manner that retained most of the features of the default collections without having to rewrite it myself. 
+What do you do if the thing you want to add is neither a page nor a post? You can add _custom collections_ -- Jekyll's term for a set of things of the same kind, like "blog entries", "soccer matches", or "team members". While Jekyll's documentation is usually very good, it doesn't cover how to do this in a manner that retained most of the features of the default collections without having to rewrite it myself.
 
 To make a custom collection, first _decide on a name_ for your collection. Then make a folder named `_<name>` in your source directory. For instance, if you want to make a collection representing the authors on your site, you might have an `authors` collection, so you would want a directory named `_authors`.
 

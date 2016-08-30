@@ -1,6 +1,6 @@
 ---
 type:         post
-title:        "In the Beginning"
+title:        "In the beginning"
 date:         2015-04-01T08:00:00Z
 published:    true
 tags:

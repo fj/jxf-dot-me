@@ -1,6 +1,6 @@
 ---
 type:         post
-title:        "Comprehensive Technologist's Guide to Charlottesville for Prospective Citizens"
+title:        "Comprehensive technologist's guide to Charlottesville for prospective citizens"
 date:         2015-07-01T10:00:00Z
 published:    true
 tags:

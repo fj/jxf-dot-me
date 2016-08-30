@@ -1,6 +1,6 @@
 ---
 type:         post
-title:        "Solving the \"Cheryl's Birthday\" Problem with Prolog"
+title:        "Solving the \"Cheryl's Birthday\" problem with Prolog"
 date:         2015-04-17T08:00:00Z
 published:    true
 tags:

@@ -1,6 +1,6 @@
 ---
 type:         post
-title:        "The Infinity Zoo: What is Infinity?"
+title:        "The Infinity Zoo: what is infinity?"
 date:         2015-04-24T08:00:00Z
 published:    true
 tags:
