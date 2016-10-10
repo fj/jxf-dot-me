@@ -3,7 +3,7 @@
   {% assign image_src = "" | append: include.showcase.logo_asset_uri %}
   <img src="{{ image_src }}" alt="image for {{ include.showcase.title }}">
 {% else %}
-  <img src="http://placehold.it/1200x600">
+  <img src="http://placehold.it/1200x600" alt="no image found; using placeholder">
 {% endif %}
 
 
