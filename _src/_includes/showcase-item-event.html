@@ -9,7 +9,16 @@
 
 <h3 class="g-item-title">
   <a href="{{include.showcase.url | prepend: site.baseurl}}" title="{{include.showcase.title | xml_escape}}">
+  {% if include.showcase.title %}
     {{ include.showcase.title }}
+  {% elsif include.showcase.happening and include.showcase.event %}
+    {% assign happening_titles = "" | split: "|" %}
+    {% for h in include.showcase.happening %}
+      {% capture h_title %}"{{ h.name }}"{% endcapture %}
+      {% assign happening_titles = happening_titles | push: h_title %}
+    {% endfor %}
+    {{ include.showcase.event.host }}: {{ happening_titles | join: ', ' }}
+  {% endif %}
   </a>
 </h3>
 
